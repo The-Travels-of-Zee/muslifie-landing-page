@@ -1,3 +1,5 @@
+import { Home, Star, Rocket, DollarSign, HelpCircle } from "lucide-react";
+
 const templateConfig = {
   name: "Muslifie",
   seo: {
@@ -45,11 +47,11 @@ const templateConfig = {
     hideAppStore: false,
     hideGooglePlay: false,
     links: [
-      { href: "/", title: "Home" },
-      { href: "#features", title: "Features" },
-      { href: "#how-it-works", title: "How it works" },
-      { href: "#pricing", title: "Pricing" },
-      { href: "#faq", title: "FAQ" },
+      { href: "/", title: "Home", icon: Home },
+      { href: "#features", title: "Features", icon: Star },
+      { href: "#how-it-works", title: "How it works", icon: Rocket },
+      { href: "#pricing", title: "Pricing", icon: DollarSign },
+      { href: "#faq", title: "FAQ", icon: HelpCircle },
     ],
   },
   appBanner: {
