@@ -2,13 +2,9 @@
 import { motion, useScroll } from "@/lib/motion";
 import { useRef, useState } from "react";
 import SingleScreenshot from "@/components/SingleScreenshot";
-import SVGBlob from "@/public/svg/blob";
 import InputEmail from "./InputEmail";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
 
 function Header({ header, partners }) {
-  const pathname = usePathname();
   const [selectedType, setSelectedType] = useState("users"); // Default to "users"
   const [newsletterType, setNewsletterType] = useState("users"); // For InputEmail component
 
@@ -28,9 +24,9 @@ function Header({ header, partners }) {
     <section id={header.id} className="relative min-h-screen overflow-hidden pt-20">
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 -z-10">
-        <img src="./images/two-muslim-women-1.webp" className="w-full h-full object-cover" alt="Background" />
+        <img src="./images/switzerland.jpg" className="w-full h-full object-cover" alt="Background" />
         {/* Multi-layered overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent md:bg-gradient-to-r md:from-transparent md:via-black/50 md:to-black/70"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30"></div>
       </div>
 

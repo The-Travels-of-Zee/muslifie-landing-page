@@ -153,33 +153,27 @@ const templateConfig = {
     },
     features: {
       id: "features",
-      title: "Why Muslifie? Because it’s crafted with your values at its core.",
+      title: "Your travel should be effortless.",
       subtitle:
-        "In a digital world brimming with AI assistants, Muslifie stands out by aligning technology with Islamic principles. It’s not just about providing answers; it’s about ensuring those answers resonate with your faith and lifestyle.",
+        "Muslifie is more than just a travel app, it's a trusted companion for every Muslim traveler. From finding halal food to locating nearby prayer spaces, Muslifie brings peace of mind wherever your journey takes you.",
       cards: [
         {
-          title: "Faith-Aligned Guidance",
+          title: "Halal Food Locator",
           subtitle:
-            "Ever sought financial advice only to be presented with options that conflict with halal practices? Muslifie understands and respects your values, offering solutions that are both effective and permissible.",
-          icon: "/3D/link-front-color.webp",
+            "Easily discover halal certified restaurants, cafes, and eateries around you, whether you're in your hometown or exploring a new country.",
+          icon: "/videos/compass.webm",
         },
         {
-          title: "Authentic Knowledge Base",
+          title: "Nearby Prayer Spaces",
           subtitle:
-            "By integrating existing AI capabilities with meticulously vetted Islamic data, Muslifie ensures the information you receive is both accurate and appropriate.",
-          icon: "/3D/sheild-front-color.webp",
+            "Never miss a prayer again. Muslifie helps you find mosques and clean, accessible prayer areas based on your current location.",
+          icon: "/videos/prayer-mat.webm",
         },
         {
-          title: "Affordable Access",
+          title: "Inclusive for All",
           subtitle:
-            "Quality AI assistance shouldn’t come at a premium. Muslifie offers cost-effective solutions without compromising on integrity or performance.",
-          icon: "/3D/dollar-front-color.webp",
-        },
-        {
-          title: "Community-Centric Design",
-          subtitle:
-            "Built by Muslims for Muslims, Muslifie is more than a tool, it’s a companion that understands your unique needs.",
-          icon: "/3D/notify-heart-front-color.webp",
+            "Whether you're Muslim or simply curious about halal options, Muslifie offers value for everyone who respects diverse lifestyles.",
+          icon: "/videos/passenger-running.webm",
         },
       ],
     },

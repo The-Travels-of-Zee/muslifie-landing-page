@@ -63,7 +63,7 @@ const InputEmail = ({ title = "Subscribe", apiUrl = "/api/newsletter", type }) =
           <button
             type="submit"
             disabled={status === "loading"}
-            className="absolute right-1 top-1 bottom-1 my-auto h-[calc(100%-8px)] px-4 bg-gradient-to-r from-(--danger) to-(--primary-light) text-white font-semibold text-sm rounded-full transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute right-1 top-1 bottom-1 my-auto h-[calc(100%-8px)] px-4 bg-secondary text-white font-semibold text-sm rounded-full transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {status === "loading" ? "Subscribing..." : title}
           </button>

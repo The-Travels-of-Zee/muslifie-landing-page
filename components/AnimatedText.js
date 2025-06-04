@@ -13,7 +13,7 @@ function AnimatedText({ text, initial, whileInView }) {
             initial={{ opacity: 0, y: "-20%", ...initial }}
             whileInView={{ opacity: 1, y: "0%", ...whileInView }}
             viewport={{ once: true }}
-            transition={{ ease: "easeInOut", delay: charIndex * 0.05 }}
+            transition={{ ease: "easeInOut", delay: 1 }}
           >
             {char}
           </motion.span>
