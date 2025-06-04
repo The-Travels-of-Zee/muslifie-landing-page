@@ -118,7 +118,7 @@ function Header({ header, partners }) {
                       className={`flex-1 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                         selectedType === "users"
                           ? "bg-gradient-to-r from-primary to-(--primary-light) text-white shadow-lg"
-                          : "text-white hover:text-white hover:bg-white/10"
+                          : "text-white hover:text-white hover:bg-white/10 cursor-pointer"
                       }`}
                     >
                       🧭 Traveler
@@ -135,42 +135,36 @@ function Header({ header, partners }) {
                     </button>
                   </div>
 
+                  {/* Description Text */}
+                  <p className="text-sm text-white text-center">
+                    {selectedType === "users"
+                      ? "Get notified about halal restaurants and prayer spots in your travel destinations"
+                      : "Share your local knowledge and help fellow Muslims discover halal options"}
+                  </p>
                   {/* Email Input */}
                   <InputEmail
                     title={selectedType === "users" ? "Join as Traveler" : "Join as Guide"}
                     apiUrl="/api/newsletter"
                     type={newsletterType}
                   />
-
-                  {/* Description Text */}
-                  <p className="text-sm text-gray-300 text-center">
-                    {selectedType === "users"
-                      ? "Get notified about halal restaurants and prayer spots in your travel destinations"
-                      : "Share your local knowledge and help fellow Muslims discover halal options"}
-                  </p>
                 </div>
               </motion.div>
 
               {/* User Avatars */}
               {header.usersDescription && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.9, duration: 0.5 }}
-                  className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
-                >
+                <motion.div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                   <div className="flex -space-x-3">
                     {Array.from({ length: 5 }).map((_, index) => (
                       <motion.div
                         key={index}
-                        initial={{ scale: 0, opacity: 0 }}
+                        initial={{ scale: 0.5, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{
                           delay: 1 + index * 0.1,
                           type: "spring",
                           stiffness: 200,
                         }}
-                        className="w-12 h-12 rounded-full border-3 border-white shadow-lg overflow-hidden hover:scale-110 transition-transform duration-200"
+                        className="w-10 h-10 rounded-full border-3 border-white shadow-lg overflow-hidden hover:scale-110 transition-transform duration-200"
                       >
                         <img
                           src={`/avatars/${index + 1}.webp`}
@@ -184,7 +178,7 @@ function Header({ header, partners }) {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1.3 }}
-                    className="text-sm sm:text-base text-gray-300 font-medium"
+                    className="text-sm sm:text-base text-white font-medium"
                   >
                     {header.usersDescription}
                   </motion.p>

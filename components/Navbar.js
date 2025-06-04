@@ -1,9 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { Menu, X, Home, Info, Users, Mail, User, MapPin } from "lucide-react";
+import React, { useState, useEffect, useContext } from "react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { ConfigContext } from "@/utils/configContext";
 
 const Navbar = () => {
+  const { name, showThemeSwitch, topNavbar, theme } = useContext(ConfigContext);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -23,14 +25,6 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  const navItems = [
-    { name: "Home", href: "#home", icon: Home },
-    { name: "How it Works", href: "#how-it-works", icon: Info },
-    { name: "Reviews", href: "#reviews", icon: Users },
-    { name: "Travel Tips", href: "#travel-tips", icon: MapPin },
-    { name: "Contact", href: "#contact", icon: Mail },
-  ];
-
   return (
     <>
       {/* Main Navbar */}
@@ -44,34 +38,36 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <div
-                className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${
-                  scrolled ? "bg-emerald-500" : "bg-emerald-500/90"
-                }`}
-              >
-                <span className="text-white font-bold text-lg">🕌</span>
+            <Link href="/">
+              <div className="flex items-center space-x-3">
+                <div
+                  className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${
+                    scrolled ? "bg-primary" : "bg-primary/90"
+                  }`}
+                >
+                  <span className="text-white font-bold text-lg">🕌</span>
+                </div>
+                <span
+                  className={`text-xl font-bold transition-colors duration-300 ${
+                    scrolled ? "text-gray-900" : "text-white"
+                  }`}
+                >
+                  Muslifie
+                </span>
               </div>
-              <span
-                className={`text-xl font-bold transition-colors duration-300 ${
-                  scrolled ? "text-gray-900" : "text-white"
-                }`}
-              >
-                Muslifie
-              </span>
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              {navItems.map((item) => (
+              {topNavbar.links.map(({ title, href }, index) => (
                 <a
-                  key={item.name}
-                  href={item.href}
+                  key={index}
+                  href={href}
                   className={`relative font-medium transition-all duration-300 hover:scale-105 group ${
                     scrolled ? "text-gray-700 hover:text-emerald-600" : "text-white/90 hover:text-white"
                   }`}
                 >
-                  {item.name}
+                  {title}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
@@ -138,12 +134,12 @@ const Navbar = () => {
 
           {/* Mobile Menu Items */}
           <div className="p-6 space-y-4">
-            {navItems.map((item, index) => {
-              const Icon = item.icon;
+            {topNavbar.links.map(({ title, href, icon }, index) => {
+              const Icon = icon;
               return (
                 <a
-                  key={item.name}
-                  href={item.href}
+                  key={index}
+                  href={href}
                   onClick={closeMenu}
                   className={`flex items-center space-x-4 p-4 rounded-xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-300 transform hover:scale-105 ${
                     isOpen ? "animate-slideIn" : ""
@@ -151,7 +147,7 @@ const Navbar = () => {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <Icon size={20} />
-                  <span className="font-medium">{item.name}</span>
+                  <span className="font-medium">{title}</span>
                 </a>
               );
             })}

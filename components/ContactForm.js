@@ -129,7 +129,7 @@ export default function ContactForm() {
             <h1 className="text-2xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary/70 to-secondary/70 bg-clip-text text-transparent">
               We're Here To Help You
             </h1>
-            <p className="text-gray-600 text-lg">Share your thoughts and Help us improve FarahGPT</p>
+            <p className="text-gray-600 text-lg">Share your thoughts and Help us improve Muslifie</p>
           </div>
 
           {/* Form */}
