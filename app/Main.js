@@ -21,13 +21,13 @@ const Main = () => {
     <ConfigContext.Provider value={templateConfig}>
       <main>
         <Header header={header} partners={partners} />
-        {/* <Features features={features} />
-        <VideoMockup videoSrc="/videos/test-video.webm" />
-        <HowItWorks howItWorks={howItWorks} />
-        <Pricing />
-        <Faq />
-        <ContactForm />
-        <AppBanner /> */}
+        <Features features={features} />
+        {/* <VideoMockup videoSrc="/videos/test-video.webm" /> */}
+        {/* <HowItWorks howItWorks={howItWorks} /> */}
+        {/* <Pricing /> */}
+        {/* <Faq /> */}
+        {/* <ContactForm /> */}
+        {/* <AppBanner /> */}
       </main>
     </ConfigContext.Provider>
   );

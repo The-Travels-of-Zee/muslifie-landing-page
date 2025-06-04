@@ -60,7 +60,7 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {topNavbar.links.map(({ title, href }, index) => (
-                <a
+                <Link
                   key={index}
                   href={href}
                   className={`relative font-medium transition-all duration-300 hover:scale-105 group ${
@@ -69,7 +69,7 @@ const Navbar = () => {
                 >
                   {title}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -137,7 +137,7 @@ const Navbar = () => {
             {topNavbar.links.map(({ title, href, icon }, index) => {
               const Icon = icon;
               return (
-                <a
+                <Link
                   key={index}
                   href={href}
                   onClick={closeMenu}
@@ -148,7 +148,7 @@ const Navbar = () => {
                 >
                   <Icon size={20} />
                   <span className="font-medium">{title}</span>
-                </a>
+                </Link>
               );
             })}
           </div>

@@ -39,15 +39,15 @@
 
 /* Theme Variables Inline */
 @theme inline {
-  --primary: #fb8500;
-  --primary-light: #ffb703;
+  --primary: #00635D;
+  --primary-light: #98D2EB;
   --dark: #1b1a17;
   --danger: #ef476f;
-  --secondary: #219ebc;
-  --secondary-light: #8ecae6;
-  --secondary-dark: #023047;
-  --accent: #00ba7d;
-  --muted: #f8ffe5;
+  --secondary: #7E2E84;
+  --secondary-light: #F9B3D1;
+  --secondary-dark: #2F1847;
+  --accent: #DBB68F;
+  --muted: #EBEBD3;
 
   --font-amiri: "Amiri-Bold", sans-serif;
   --font-notosans-light: "NotoSans-Light", sans-serif;
