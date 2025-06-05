@@ -26,7 +26,7 @@ const Main = () => {
         <HowItWorks howItWorks={howItWorks} />
         {/* <Pricing /> */}
         {/* <Faq /> */}
-        {/* <ContactForm /> */}
+        <ContactForm />
         {/* <AppBanner /> */}
       </main>
     </ConfigContext.Provider>
