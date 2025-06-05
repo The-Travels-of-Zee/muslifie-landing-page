@@ -23,7 +23,7 @@ const Main = () => {
         <Header header={header} partners={partners} />
         <Features features={features} />
         {/* <VideoMockup videoSrc="/videos/test-video.webm" /> */}
-        {/* <HowItWorks howItWorks={howItWorks} /> */}
+        <HowItWorks howItWorks={howItWorks} />
         {/* <Pricing /> */}
         {/* <Faq /> */}
         {/* <ContactForm /> */}

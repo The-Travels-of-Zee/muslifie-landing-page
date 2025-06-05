@@ -25,7 +25,7 @@ function Features({ features }) {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-(--secondary-dark) leading-tight">
               <AnimatedText text={features.title} />
             </h2>
 

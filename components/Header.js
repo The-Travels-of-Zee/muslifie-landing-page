@@ -1,6 +1,6 @@
 "use client";
-import { motion, useScroll } from "@/lib/motion";
-import { useRef, useState } from "react";
+import { motion } from "@/lib/motion";
+import { useState } from "react";
 import SingleScreenshot from "@/components/SingleScreenshot";
 import InputEmail from "./InputEmail";
 
@@ -9,11 +9,6 @@ function Header({ header, partners }) {
   const [newsletterType, setNewsletterType] = useState("users"); // For InputEmail component
 
   if (!header) return null;
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end end"],
-  });
 
   const handleTypeToggle = (type) => {
     setSelectedType(type);
@@ -21,10 +16,10 @@ function Header({ header, partners }) {
   };
 
   return (
-    <section id={header.id} className="relative min-h-screen overflow-hidden pt-20">
+    <section id={header.id} className="relative min-h-screen overflow-hidden pt-16">
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 -z-10">
-        <img src="./images/switzerland.jpg" className="w-full h-full object-cover" alt="Background" />
+        <img src="./images/mount-fuji-1.jpg" className="w-full h-full object-cover" alt="Background" />
         {/* Multi-layered overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent md:bg-gradient-to-r md:from-transparent md:via-black/50 md:to-black/70"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30"></div>
@@ -56,7 +51,7 @@ function Header({ header, partners }) {
                   className="relative h-[548px] 2xs:h-[720px] sm:h-[648px] md:h-[548px] rounded-[3rem]"
                 >
                   <div className="absolute top-2.5 left-3 w-[calc(100%-24px)] h-[calc(100%-16px)] rounded-[1rem] 2xs:rounded-[2rem] overflow-hidden">
-                    <SingleScreenshot src={header.screenshots[0]} scrollYProgress={scrollYProgress} />
+                    <SingleScreenshot src={header.screenshots[0]} />
                   </div>
                   <img src="/misc/iphone-frame.webp" alt="iphone-frame" className="relative z-10 h-full" />
                 </motion.div>
