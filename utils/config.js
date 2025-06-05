@@ -135,7 +135,7 @@ const templateConfig = {
           title: "Get Real-Time Guidance",
           subtitle:
             "Muslifie helps you stay on track with live prayer notifications, Qibla direction, and curated halal guides for each destination.",
-          // image: "/screenshots/header-screenshot.png",
+          image: "/screenshots/realtime-guidance-img.png",
         },
         {
           title: "Share & Support the Ummah",
