@@ -111,43 +111,43 @@ const templateConfig = {
       id: "how-it-works",
       title: "How It Works",
       subtitle:
-        "Begin your journey of seeking and sharing knowledge with these simple steps, rooted in sincerity and ease.",
+        "Discover halal-friendly spots, connect with the community, and travel with peace of mind — all in just a few steps.",
       steps: [
         {
-          title: "Choose Your Path",
+          title: "Sign Up & Choose Your Role",
           subtitle:
-            "Sign up and select whether you're a Student (طالب علم) or a Mentor (معلم). Your journey begins here.",
-          image: "/images/choose-role.webp",
+            "Join Muslifie as a Traveler or Local Guide. Whether you're exploring or sharing hidden gems, your journey starts here.",
+          // image: "/screenshots/header-screenshot.png",
         },
         {
-          title: "Set Up Your Profile",
+          title: "Set Your Preferences",
           subtitle:
-            "Create a profile that reflects your goals and interests. Mentors can showcase their expertise, while students highlight areas of focus.",
-          image: "/images/setup-profile.webp",
+            "Tell us what matters to you — halal food types, prayer space preferences, destinations of interest — so we can personalize your experience.",
+          image: "/screenshots/set-preferences-img.png",
         },
         {
-          title: "Browse or Upload Courses",
+          title: "Discover Halal Spots",
           subtitle:
-            "Students can explore a growing library of paid and free courses in Qur’an, Hadith, Fiqh, Arabic, and more. Mentors can upload and manage structured lessons with ease.",
-          image: "/images/browse-courses.webp",
+            "Browse nearby halal restaurants, prayer spaces, and local Muslim-friendly services curated and reviewed by the community.",
+          image: "/screenshots/discover-halal-img.png",
         },
         {
-          title: "Get Support from Muslifie",
+          title: "Get Real-Time Guidance",
           subtitle:
-            "Meet Muslifie — your AI-powered Islamic assistant. Ask questions about course material, get authentic references, and receive guidance based on trusted scholarly sources.",
-          image: "/images/Muslifie-help.webp",
+            "Muslifie helps you stay on track with live prayer notifications, Qibla direction, and curated halal guides for each destination.",
+          // image: "/screenshots/header-screenshot.png",
         },
         {
-          title: "Learn and Interact",
+          title: "Share & Support the Ummah",
           subtitle:
-            "Join live classes or watch recordings. Ask questions, leave feedback, and benefit from direct mentor guidance, all in one place.",
-          image: "/images/learn-interact.webp",
+            "Leave reviews, upload new halal locations, and help other Muslims travel confidently — your input benefits the whole community.",
+          image: "/screenshots/share-reviews-img.png",
         },
         {
-          title: "Grow with Consistency (Istiqamah)",
+          title: "Travel with Barakah",
           subtitle:
-            "Track your learning, set goals, and build habits of consistent seeking or teaching of knowledge, striving for barakah and impact.",
-          image: "/images/grow-consistency.webp",
+            "Make the most of your journey with tools that align your travel with your values — combining adventure, spirituality, and ease.",
+          image: "/screenshots/travel-barakah-img.png",
         },
       ],
     },
@@ -222,7 +222,7 @@ const templateConfig = {
       cta: "Join The Waitlist",
       headline: "Your all-in-one travel app",
       subtitle: "Join a growing ummah of students and mentors united by the light of Islamic knowledge.",
-      screenshots: ["/screenshots/header-screenshot.png"],
+      screenshots: ["/screenshots/homepage-screenshot-img.png"],
       rewards: ["إن شاءالله"],
       usersDescription: "2,000+ people already in the waiting list",
       headlineMark: [2, 5],
