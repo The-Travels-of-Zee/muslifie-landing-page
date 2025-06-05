@@ -16,10 +16,10 @@ function Header({ header, partners }) {
   };
 
   return (
-    <section id={header.id} className="relative min-h-screen overflow-hidden pt-16">
+    <section id={header.id} className="relative min-h-screen overflow-hidden pt-16 md:pt-0">
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 -z-10">
-        <img src="./images/mount-fuji-1.jpg" className="w-full h-full object-cover" alt="Background" />
+        <img src="./images/mount-fuji-2.webp" className="w-full h-full object-cover" alt="Background" />
         {/* Multi-layered overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent md:bg-gradient-to-r md:from-transparent md:via-black/50 md:to-black/70"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30"></div>
