@@ -117,37 +117,37 @@ const templateConfig = {
           title: "Sign Up & Choose Your Role",
           subtitle:
             "Join Muslifie as a Traveler or Local Guide. Whether you're exploring or sharing hidden gems, your journey starts here.",
-          image: "/screenshots/join-app-img.png",
+          image: "/screenshots/join-app-img.webp",
         },
         {
           title: "Set Your Preferences",
           subtitle:
             "Tell us what matters to you — halal food types, prayer space preferences, destinations of interest — so we can personalize your experience.",
-          image: "/screenshots/set-preferences-img.png",
+          image: "/screenshots/set-preferences-img.webp",
         },
         {
           title: "Discover Halal Spots",
           subtitle:
             "Browse nearby halal restaurants, prayer spaces, and local Muslim-friendly services curated and reviewed by the community.",
-          image: "/screenshots/discover-halal-img.png",
+          image: "/screenshots/discover-halal-img.webp",
         },
         {
           title: "Get Real-Time Guidance",
           subtitle:
             "Muslifie helps you stay on track with live prayer notifications, Qibla direction, and curated halal guides for each destination.",
-          image: "/screenshots/realtime-guidance-img.png",
+          image: "/screenshots/realtime-guidance-img.webp",
         },
         {
           title: "Share & Support the Ummah",
           subtitle:
             "Leave reviews, upload new halal locations, and help other Muslims travel confidently — your input benefits the whole community.",
-          image: "/screenshots/share-reviews-img.png",
+          image: "/screenshots/share-reviews-img.webp",
         },
         {
           title: "Travel with Barakah",
           subtitle:
             "Make the most of your journey with tools that align your travel with your values — combining adventure, spirituality, and ease.",
-          image: "/screenshots/travel-barakah-img.png",
+          image: "/screenshots/travel-barakah-img.webp",
         },
       ],
     },
@@ -222,7 +222,7 @@ const templateConfig = {
       cta: "Join The Waitlist",
       headline: "Your all-in-one travel app",
       subtitle: "Join a growing ummah of students and mentors united by the light of Islamic knowledge.",
-      screenshots: ["/screenshots/homepage-screenshot-img.png"],
+      screenshots: ["/screenshots/homepage-screenshot-img.webp"],
       rewards: ["إن شاءالله"],
       usersDescription: "2,000+ people already in the waiting list",
       headlineMark: [2, 5],
