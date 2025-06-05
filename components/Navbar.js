@@ -3,6 +3,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { ConfigContext } from "@/utils/configContext";
+import Image from "next/image";
 
 const Navbar = () => {
   const { name, showThemeSwitch, topNavbar, theme } = useContext(ConfigContext);
@@ -40,15 +41,15 @@ const Navbar = () => {
             {/* Logo */}
             <Link href="/">
               <div className="flex items-center space-x-3">
-                <div
-                  className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${
-                    scrolled ? "bg-primary" : "bg-primary/90"
-                  }`}
-                >
-                  <span className="text-white font-bold text-lg">🕌</span>
-                </div>
+                <Image
+                  src="/favicon/logo.webp"
+                  width={56}
+                  height={56}
+                  className="w-full h-10 md:h-14"
+                  alt="Website-Logo"
+                />
                 <span
-                  className={`text-xl font-bold transition-colors duration-300 ${
+                  className={`text-2xl font-bold transition-colors duration-300 ${
                     scrolled ? "text-gray-900" : "text-white"
                   }`}
                 >
@@ -82,7 +83,7 @@ const Navbar = () => {
               >
                 Login
               </button> */}
-              <button className="px-6 py-2 bg-gradient-to-r from-primary to-(--primary-light) hover:from-primary/90 hover:to-(--primary-light)/90 text-white rounded-lg font-medium transition-all duration-300 transform cursor-pointer hover:scale-105 shadow-lg hover:shadow-xl">
+              <button className="px-6 py-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/80 text-white rounded-lg font-medium transition-all duration-300 transform cursor-pointer hover:scale-105 shadow-lg hover:shadow-xl">
                 Join For Free
               </button>
             </div>

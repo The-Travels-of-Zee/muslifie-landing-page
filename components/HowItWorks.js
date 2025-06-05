@@ -86,18 +86,18 @@ function HowItWorks({ howItWorks }) {
                         <span className="text-xl font-bold text-white">{index + 1}</span>
                       </div>
                       {/* Connecting dots for mobile */}
-                      {/* {index < howItWorks.steps.length && (
+                      {index < howItWorks.steps.length && (
                         <div className="lg:hidden flex flex-col items-center ml-8 space-y-1">
                           {[...Array(3)].map((_, i) => (
                             <div key={i} className="w-1.5 h-1.5 bg-secondary/30 rounded-full" />
                           ))}
                         </div>
-                      )} */}
+                      )}
                     </div>
 
                     <h3 className="text-2xl lg:text-3xl font-bold text-(--secondary-dark) mb-4">{step.title}</h3>
 
-                    {/* <div className="w-12 h-0.5 bg-gradient-to-r from-secondary to-(--secondary-light) mx-auto lg:mx-0 mb-4" /> */}
+                    <div className="hidden md:block w-12 h-0.5 bg-gradient-to-r from-secondary to-(--secondary-light) mx-auto lg:mx-0 mb-4" />
 
                     <p className="text-gray-600 text-base lg:text-lg leading-relaxed max-w-md mx-auto lg:mx-0">
                       {step.subtitle}

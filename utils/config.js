@@ -47,7 +47,7 @@ const templateConfig = {
     hideAppStore: false,
     hideGooglePlay: false,
     links: [
-      { href: "/", title: "Home", icon: Home },
+      { href: "#header", title: "Home", icon: Home },
       { href: "#features", title: "Features", icon: Star },
       { href: "#how-it-works", title: "How it works", icon: Rocket },
       { href: "#pricing", title: "Pricing", icon: DollarSign },
@@ -117,7 +117,7 @@ const templateConfig = {
           title: "Sign Up & Choose Your Role",
           subtitle:
             "Join Muslifie as a Traveler or Local Guide. Whether you're exploring or sharing hidden gems, your journey starts here.",
-          // image: "/screenshots/header-screenshot.png",
+          image: "/screenshots/join-app-img.png",
         },
         {
           title: "Set Your Preferences",
