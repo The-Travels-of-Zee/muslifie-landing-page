@@ -49,7 +49,7 @@ function HowItWorks({ howItWorks }) {
         {/* Steps */}
         <div className="relative">
           {/* Vertical connecting line for desktop */}
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-(--primary-light) via-primary to-transparent" />
+          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 lg:w-px xl:w-0.5 bg-gradient-to-b from-(--primary-light) via-primary to-transparent" />
 
           <div className="space-y-16 lg:space-y-24">
             {howItWorks.steps.map((step, index) => (

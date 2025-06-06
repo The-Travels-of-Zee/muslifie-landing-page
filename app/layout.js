@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className={"font-notosans antialiased"}>
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
