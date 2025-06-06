@@ -184,37 +184,37 @@ const templateConfig = {
         {
           question: "What is Muslifie?",
           answer:
-            '"Farah" is an AI-powered assistant designed to answer your Islamic questions instantly, based on authentic sources and scholarly perspectives. It aims to provide reliable information and guidance on various Islamic topics.',
+            "Muslifie is a travel companion app designed not only for Muslims but Everyone who want to explore the world while staying connected to their values. It helps you find halal restaurants, nearby prayer spaces, and connect with local Muslim-friendly services.",
         },
         {
-          question: "Is Muslifie giving fatwas?",
+          question: "Is Muslifie only for Muslims?",
           answer:
-            "No. Farah is an AI assistant that provides information and guidance based on authentic Islamic knowledge, but it does not replace qualified scholars or personal fatwas. For specific legal rulings, always consult a qualified scholar.",
+            "Not at all! While Muslifie is designed with Muslim travelers in mind, anyone interested in halal food, cultural respect, and ethical travel is welcome to use the app.",
         },
         {
-          question: "How accurate are the answers?",
+          question: "How does Muslifie find halal places?",
           answer:
-            "Answers are generated using GPT-4 Turbo AI, fine-tuned on authentic Islamic resources and verified content. However, users should always consult a trusted scholar for personal or complex issues. The AI is a tool to assist, not a replacement for scholarly advice.",
+            "We combine community reviews, verified data, and local guide contributions to ensure listings are as authentic and accurate as possible. Users can also suggest and review new places to keep the app fresh and relevant.",
         },
         {
-          question: "Is the Muslifie trained by real Islamic scholars?",
+          question: "Does Muslifie work offline?",
           answer:
-            "The responses are based on FINE-tuning the models that are already trained on datasets compiled from reliable Islamic books, hadith, and scholarly works.",
+            "Some features like saved locations and offline maps are accessible without an internet connection. However, for real-time discovery and updates, we recommend being online.",
         },
         {
-          question: "How does the Muslifie ensure Islamic authenticity?",
+          question: "Can I contribute as a local guide?",
           answer:
-            "The AI uses curated data from reliable Islamic sources, but as it's a machine-generated response, users should verify sensitive matters. We recommend consulting a qualified scholar for personal or complex issues.",
+            "Yes! Local Guides play a key role in Muslifie. You can share hidden halal gems, add prayer spaces, and help fellow travelers experience your city with ease and comfort.",
         },
         {
-          question: "How do I cancel my subscription?",
+          question: "Is there a cost to use Muslifie?",
           answer:
-            "You can cancel anytime from your account settings. If you face any issues, please contact our support team for assistance.",
+            "Muslifie offers a free plan with core features. We also offer a premium plan with additional benefits like offline access, curated destination guides, and priority support.",
         },
         {
-          question: "Is my data and privacy safe?",
+          question: "Is my data safe with Muslifie?",
           answer:
-            "Absolutely. We follow strict data privacy protocols. Your personal information is never shared with third parties without your consent. We prioritize your privacy and security.",
+            "Absolutely. We take your privacy seriously and follow industry best practices to keep your data secure. Your information is never shared without your permission.",
         },
       ],
     },
@@ -494,7 +494,7 @@ Muslifie
 
 📧 [info@thetravelsofzee.com](mailto:info@thetravelsofzee.com)  
 🕌 With sincerity and responsibility,  
-**Team Farah**
+**Team Muslifie**
 
 `,
   },
