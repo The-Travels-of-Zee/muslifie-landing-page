@@ -16,7 +16,7 @@ function Header({ header, partners }) {
   };
 
   return (
-    <section id={header.id} className="relative min-h-screen overflow-hidden pt-16 md:pt-0">
+    <section id={header.id} className="relative min-h-screen overflow-hidden pt-16 md:pt-8">
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 -z-10">
         <img src="./images/mount-fuji-2.webp" className="w-full h-full object-cover" alt="Background" />
