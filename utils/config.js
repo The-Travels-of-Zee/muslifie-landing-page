@@ -56,10 +56,10 @@ const templateConfig = {
   },
   appBanner: {
     id: "app-banner",
-    title: "Download Our Mobile App Today!",
+    title: "Download On The First Day Of Launch!",
     subtitle:
-      "Unlock the full potential of our services with seamless access at your fingertips. Stay connected, informed, and in control wherever you are.",
-    screenshots: ["/screenshots/explore-courses.webp", "/screenshots/seller-courses.webp"],
+      "Discover halal-friendly travel like never before, all at your reach. Find nearby halal food, prayer spaces, and more, anytime, anywhere. Download Muslifie and travel with peace of mind.",
+    screenshots: ["/screenshots/homepage-screenshot-img.webp", "/screenshots/realtime-guidance-img.webp"],
   },
   home: {
     seo: {
@@ -111,7 +111,7 @@ const templateConfig = {
       id: "how-it-works",
       title: "How It Works",
       subtitle:
-        "Discover halal-friendly spots, connect with the community, and travel with peace of mind — all in just a few steps.",
+        "Discover halal-friendly spots, connect with the community, and travel with peace of mind all in just a few steps.",
       steps: [
         {
           title: "Sign Up & Choose Your Role",
@@ -122,7 +122,7 @@ const templateConfig = {
         {
           title: "Set Your Preferences",
           subtitle:
-            "Tell us what matters to you — halal food types, prayer space preferences, destinations of interest — so we can personalize your experience.",
+            "Tell us what matters to you, halal food types, prayer space preferences, destinations of interest, so we can personalize your experience.",
           image: "/screenshots/set-preferences-img.webp",
         },
         {
@@ -140,13 +140,13 @@ const templateConfig = {
         {
           title: "Share & Support the Ummah",
           subtitle:
-            "Leave reviews, upload new halal locations, and help other Muslims travel confidently — your input benefits the whole community.",
+            "Leave reviews, upload new halal locations, and help other Muslims travel confidently your input benefits the whole community.",
           image: "/screenshots/share-reviews-img.webp",
         },
         {
           title: "Travel with Barakah",
           subtitle:
-            "Make the most of your journey with tools that align your travel with your values — combining adventure, spirituality, and ease.",
+            "Make the most of your journey with tools that align your travel with your values combining adventure, spirituality, and ease.",
           image: "/screenshots/travel-barakah-img.webp",
         },
       ],

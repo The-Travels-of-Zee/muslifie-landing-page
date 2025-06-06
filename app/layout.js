@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/favicon/manifest.json" /> */}
       </head>
 
-      <body className={"font-notosans antialiased"}>
+    <body className={"font-notosans antialiased"}>
         <Navbar />
         {children}
         <Footer />

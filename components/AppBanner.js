@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { ConfigContext } from "@/utils/configContext";
-import Spill from "@/public/svg/spill";
 import IPhoneFrame from "@/components/IPhoneFrame";
 import { motion } from "@/lib/motion";
 import clsx from "clsx";
@@ -10,112 +9,211 @@ function AppBanner() {
   const { googlePlayLink, appStoreLink, appBanner } = useContext(ConfigContext);
 
   if (!appBanner) return null;
+
   return (
     <motion.section
       id={appBanner.id}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.4 }}
-      className="relative max-w-screen-lg mx-auto px-4 -mb-6 z-10 md:-mb-10 lg:-mb-14"
+      viewport={{ once: true, amount: 0.2 }}
+      className="relative max-w-7xl my-12 mx-auto px-4 py-16 overflow-hidden"
     >
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50 rounded-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-200/30 to-blue-200/30 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-teal-200/30 to-purple-200/30 rounded-full blur-3xl" />
+
+      {/* Floating decorative elements */}
+      <div className="absolute top-10 left-10 w-4 h-4 bg-purple-400 rounded-full animate-pulse" />
+      <div className="absolute top-20 right-20 w-6 h-6 bg-blue-400 rounded-full animate-bounce" />
+      <div className="absolute bottom-20 left-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse" />
+
       <motion.div
         variants={{
-          hidden: {
-            opacity: 0,
-            scale: 0.9,
-          },
-          visible: {
-            opacity: 1,
-            scale: 1,
-          },
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
         }}
-        transition={{
-          mass: 0.4,
-          type: "tween",
-          duration: 0.2,
-        }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative z-10"
       >
-        <div className="p-4 bg-(--primary-light) text-(--dark) rounded-lg flex flex-col items-center md:flex-row">
-          <div className="flex-1 flex flex-col items-center justify-center min-h-full">
-            <motion.h2
-              initial={{ opacity: 0, y: "-100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-0 mb-4 text-4xl md:text-6xl font-roboto"
-            >
-              {appBanner.title}
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: "100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="text-(--dark)/70 whitespace-pre-wrap text-left m-0 mt-1 md:text-lg w-[90%]"
-            >
-              {appBanner.subtitle}
-            </motion.p>
-            <motion.ul
-              initial={{ opacity: 0, y: "100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="list-none flex gap-4 my-6 p-0 w-full"
-            >
-              {googlePlayLink && (
-                <li className="m-0 p-0">
-                  <Link href={"/users"}>
-                    <img className="h-14" alt="google play logo" src="/stores/google-play.svg" />
-                  </Link>
-                </li>
-              )}
-              {appStoreLink && (
-                <li className="m-0 p-0">
-                  <Link href={"/users"}>
-                    <img className="h-14" alt="app store logo" src="/stores/app-store.svg" />
-                  </Link>
-                </li>
-              )}
-              <li className="m-0 p-0">
-                <p>We Will Notify You As We Launch</p>
-              </li>
-            </motion.ul>
-          </div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
-            className="relative flex-1 flex justify-center"
-          >
-            {appBanner.screenshots.map((src, index) => (
+        {/* Content Container */}
+        <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/50 p-8 md:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="space-y-8">
               <motion.div
-                key={index}
                 variants={{
-                  hidden: {
-                    scale: index > 0 ? 0.9 : 1,
-                    opacity: 0,
-                    rotate: 0,
-                  },
-                  visible: {
-                    scale: index > 0 ? 0.9 : 1,
-                    opacity: 1,
-                    rotate: index === 0 ? 0 : index === 1 ? "-30deg" : "30deg",
-                  },
+                  hidden: { opacity: 0, x: -50 },
+                  visible: { opacity: 1, x: 0 },
                 }}
-                transition={{
-                  stiffness: 150,
-                  mass: 0.5,
-                  type: "tween",
-                  delay: index > 0 ? 0.8 : 0.5,
-                }}
-                className={clsx(
-                  "h-[30rem]",
-                  index === 0 && "relative z-20 block",
-                  index === 1 && "absolute origin-bottom-left hidden xl:block",
-                  index === 2 && "absolute origin-bottom-right hidden xl:block"
-                )}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="space-y-6"
               >
-                <IPhoneFrame src={src} />
+                <motion.h2
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 bg-clip-text text-transparent leading-tight"
+                >
+                  {appBanner.title}
+                </motion.h2>
+
+                <motion.p
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  className="text-gray-600 text-lg md:text-xl leading-relaxed whitespace-pre-wrap"
+                >
+                  {appBanner.subtitle}
+                </motion.p>
               </motion.div>
-            ))}
-          </motion.div>
+
+              {/* App Store Buttons */}
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                className="space-y-6"
+              >
+                <div className="flex flex-wrap gap-4">
+                  {googlePlayLink && (
+                    <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }} className="group">
+                      <Link href={"/users"} className="block">
+                        <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-1 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                          <div className="bg-white rounded-xl p-2 flex items-center gap-3 hover:bg-gray-50 transition-colors">
+                            <img className="h-12 w-full" alt="google play logo" src="/stores/google-play.svg" />
+                          </div>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  )}
+
+                  {appStoreLink && (
+                    <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }} className="group">
+                      <Link href={"/users"} className="block">
+                        <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-1 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                          <div className="bg-white rounded-xl p-2 flex items-center gap-3 hover:bg-gray-50 transition-colors">
+                            <img className="h-12 w-full" alt="app store logo" src="/stores/app-store.svg" />
+                          </div>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  )}
+                </div>
+
+                {/* Notification Banner */}
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9 },
+                    visible: { opacity: 1, scale: 1 },
+                  }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                  className="bg-gradient-to-r from-purple-100 to-blue-100 border border-purple-200 rounded-2xl p-4"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse" />
+                    <p className="text-purple-800 font-semibold">🚀 We'll notify you as soon as we launch!</p>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
+
+            {/* Phone Screenshots */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="relative flex justify-center items-center min-h-[500px]"
+            >
+              {/* Background glow for phones */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-300/20 via-blue-300/20 to-teal-300/20 rounded-full blur-3xl scale-150" />
+
+              {appBanner.screenshots.map((src, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    hidden: {
+                      scale: 0.8,
+                      opacity: 0,
+                      y: 50,
+                      rotate: 0,
+                    },
+                    visible: {
+                      scale: index === 0 ? 1 : 0.85,
+                      opacity: 1,
+                      y: index === 0 ? 0 : index === 1 ? 20 : -20,
+                      rotate: index === 0 ? 0 : index === 1 ? -15 : 15,
+                    },
+                  }}
+                  transition={{
+                    delay: 0.6 + index * 0.2,
+                    duration: 0.8,
+                    ease: "easeOut",
+                  }}
+                  whileHover={{
+                    scale: index === 0 ? 1.05 : 0.9,
+                    rotate: index === 0 ? 2 : index === 1 ? -10 : 10,
+                    transition: { duration: 0.3 },
+                  }}
+                  className={clsx(
+                    "relative transition-all duration-300",
+                    index === 0 && "z-30",
+                    index === 1 && "absolute z-20 -left-16 hidden lg:block",
+                    index === 2 && "absolute z-20 -right-16 hidden lg:block"
+                  )}
+                >
+                  <div className="relative">
+                    {/* Phone shadow */}
+                    <div className="absolute inset-0 bg-black/10 rounded-3xl blur-xl scale-105 translate-y-8" />
+
+                    {/* Phone frame with enhanced styling */}
+                    <div className="relative">
+                      <IPhoneFrame src={src} />
+                    </div>
+
+                    {/* Floating elements around phones */}
+                    {index === 0 && (
+                      <>
+                        <motion.div
+                          animate={{
+                            y: [0, -10, 0],
+                            rotate: [0, 5, 0],
+                          }}
+                          transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                          }}
+                          className="absolute -top-8 -right-8 w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full shadow-lg"
+                        />
+                        <motion.div
+                          animate={{
+                            y: [0, 10, 0],
+                            rotate: [0, -5, 0],
+                          }}
+                          transition={{
+                            duration: 4,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: 1,
+                          }}
+                          className="absolute -bottom-6 -left-6 w-6 h-6 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full shadow-lg"
+                        />
+                      </>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </motion.div>
     </motion.section>

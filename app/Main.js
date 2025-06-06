@@ -27,7 +27,7 @@ const Main = () => {
         {/* <Pricing /> */}
         {/* <Faq /> */}
         <ContactForm />
-        {/* <AppBanner /> */}
+        <AppBanner />
       </main>
     </ConfigContext.Provider>
   );

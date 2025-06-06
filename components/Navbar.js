@@ -119,12 +119,18 @@ const Navbar = () => {
         >
           {/* Mobile Menu Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">🕌</span>
+            <Link href="/">
+              <div className="flex items-center space-x-3">
+                <Image
+                  src="/favicon/logo.webp"
+                  width={56}
+                  height={56}
+                  className="w-full h-10 md:h-14"
+                  alt="Website-Logo"
+                />
+                <span className="text-2xl font-bold transition-colors duration-300 text-gray-900 ">Muslifie</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">Muslifie</span>
-            </div>
+            </Link>
             <button
               onClick={closeMenu}
               className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
