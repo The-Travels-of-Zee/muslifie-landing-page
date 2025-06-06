@@ -10,8 +10,8 @@ function PrivacyPolicy() {
   } = useContext(ConfigContext);
 
   return (
-    <main>
-      <section className="max-w-screen-lg mx-auto px-4 my-24">
+    <main className="bg-gradient-to-b from-0% to-5% from-secondary/60  to-accent/50 min-h-screen pt-32 pb-20">
+      <section className="max-w-screen-lg mx-auto px-4">
         <article className="prose prose-sm md:prose-lg">
           <Markdown>{content}</Markdown>
         </article>

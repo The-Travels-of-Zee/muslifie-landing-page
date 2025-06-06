@@ -84,7 +84,7 @@ function AppBanner() {
                 <div className="flex flex-wrap gap-4">
                   {googlePlayLink && (
                     <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }} className="group">
-                      <Link href={"/users"} className="block">
+                      <Link href={"/"} className="block">
                         <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-1 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                           <div className="bg-white rounded-xl p-2 flex items-center gap-3 hover:bg-gray-50 transition-colors">
                             <img className="h-12 w-full" alt="google play logo" src="/stores/google-play.svg" />
@@ -96,7 +96,7 @@ function AppBanner() {
 
                   {appStoreLink && (
                     <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }} className="group">
-                      <Link href={"/users"} className="block">
+                      <Link href={"/"} className="block">
                         <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-1 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                           <div className="bg-white rounded-xl p-2 flex items-center gap-3 hover:bg-gray-50 transition-colors">
                             <img className="h-12 w-full" alt="app store logo" src="/stores/app-store.svg" />

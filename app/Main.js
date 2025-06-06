@@ -25,7 +25,7 @@ const Main = () => {
         {/* <VideoMockup videoSrc="/videos/test-video.webm" /> */}
         <HowItWorks howItWorks={howItWorks} />
         {/* <Pricing /> */}
-        {/* <Faq /> */}
+        <Faq />
         <ContactForm />
         <AppBanner />
       </main>
