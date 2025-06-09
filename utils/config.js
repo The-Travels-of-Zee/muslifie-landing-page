@@ -50,7 +50,7 @@ const templateConfig = {
       { href: "#header", title: "Home", icon: Home },
       { href: "#features", title: "Features", icon: Star },
       { href: "#how-it-works", title: "How it works", icon: Rocket },
-      { href: "#pricing", title: "Pricing", icon: DollarSign },
+      // { href: "#pricing", title: "Pricing", icon: DollarSign },
       { href: "#faq", title: "FAQ", icon: HelpCircle },
     ],
   },
@@ -123,7 +123,7 @@ const templateConfig = {
           title: "Set Your Preferences",
           subtitle:
             "Tell us what matters to you, halal food types, prayer space preferences, destinations of interest, so we can personalize your experience.",
-          image: "/screenshots/set-preferences-img.webp",
+          image: "/screenshots/set-preferences-img-2.webp",
         },
         {
           title: "Discover Halal Spots",
@@ -141,7 +141,7 @@ const templateConfig = {
           title: "Share & Support the Ummah",
           subtitle:
             "Leave reviews, upload new halal locations, and help other Muslims travel confidently your input benefits the whole community.",
-          image: "/screenshots/share-reviews-img.webp",
+          image: "/screenshots/share-reviews-img-2.webp",
         },
         {
           title: "Travel with Barakah",
@@ -197,11 +197,6 @@ const templateConfig = {
             "We combine community reviews, verified data, and local guide contributions to ensure listings are as authentic and accurate as possible. Users can also suggest and review new places to keep the app fresh and relevant.",
         },
         {
-          question: "Does Muslifie work offline?",
-          answer:
-            "Some features like saved locations and offline maps are accessible without an internet connection. However, for real-time discovery and updates, we recommend being online.",
-        },
-        {
           question: "Can I contribute as a local guide?",
           answer:
             "Yes! Local Guides play a key role in Muslifie. You can share hidden halal gems, add prayer spaces, and help fellow travelers experience your city with ease and comfort.",
@@ -209,7 +204,7 @@ const templateConfig = {
         {
           question: "Is there a cost to use Muslifie?",
           answer:
-            "Muslifie offers a free plan with core features. We also offer a premium plan with additional benefits like offline access, curated destination guides, and priority support.",
+            "We don’t charge upfront. Instead, a small service fee is included in bookings or trips made through the app, and tour guides also contribute a portion of their earnings. This allows us to keep the app running, improve features, and support without placing extra burden on users.",
         },
         {
           question: "Is my data safe with Muslifie?",

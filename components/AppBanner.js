@@ -176,7 +176,7 @@ function AppBanner() {
 
                     {/* Phone frame with enhanced styling */}
                     <div className="relative">
-                      <IPhoneFrame src={src} />
+                      <IPhoneFrame src={src} className={"rounded-4xl h-full"} />
                     </div>
 
                     {/* Floating elements around phones */}

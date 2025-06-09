@@ -43,8 +43,8 @@ const Navbar = () => {
               <div className="flex items-center space-x-3">
                 <Image
                   src="/favicon/logo.webp"
-                  width={56}
-                  height={56}
+                  width={31.02}
+                  height={40}
                   className="w-full h-10 md:h-14"
                   alt="Website-Logo"
                 />
@@ -83,9 +83,11 @@ const Navbar = () => {
               >
                 Login
               </button> */}
+              <Link href="/#header">
               <button className="px-6 py-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/80 text-white rounded-lg font-medium transition-all duration-300 transform cursor-pointer hover:scale-105 shadow-lg hover:shadow-xl">
                 Join For Free
               </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -123,8 +125,8 @@ const Navbar = () => {
               <div className="flex items-center space-x-3">
                 <Image
                   src="/favicon/logo.webp"
-                  width={56}
-                  height={56}
+                  width={31.02}
+                  height={40}
                   className="w-full h-10 md:h-14"
                   alt="Website-Logo"
                 />
@@ -166,7 +168,7 @@ const Navbar = () => {
               <User size={20} className="inline mr-3" />
               Login
             </button> */}
-            <Link href="/#header">
+            <Link href="/#header" onClick={closeMenu}>
               <button className="w-full p-4 bg-gradient-to-r from-primary to-(--primary-light) text-white rounded-xl font-medium hover:from-primary/90 hover:to-(--primary-light)/90 cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Join For Free
               </button>
