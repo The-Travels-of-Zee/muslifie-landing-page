@@ -122,8 +122,8 @@ function Faq() {
                       </div>
                     </AccordionTrigger>
 
-                    <AccordionContent className="px-6 pb-6">
-                      <div className="pl-6 pr-4">
+                    <AccordionContent className="px-6 pt-1 pb-4">
+                      <div className="pl-2 pr-2 md:pl-6 md:pr-4">
                         <div className="bg-gradient-to-r from-purple-50/50 to-blue-50/50 rounded-xl p-4 border-l-4 border-gradient-to-b border-purple-400">
                           <p className="text-gray-700 text-base leading-relaxed">{qa.answer}</p>
                         </div>
