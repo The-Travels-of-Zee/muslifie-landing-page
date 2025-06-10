@@ -50,7 +50,7 @@ function Header({ header, partners }) {
                   }}
                   className="relative h-[548px] 2xs:h-[720px] sm:h-[648px] md:h-[548px] rounded-[3rem]"
                 >
-                  <div className="absolute top-2.5 left-3 w-[calc(100%-24px)] h-[calc(100%-16px)] rounded-[1rem] 2xs:rounded-[2rem] overflow-hidden">
+                  <div className="absolute top-[10px] left-[12px] w-[calc(100%-24px)] h-[calc(100%-16px)] rounded-[1rem] 2xs:rounded-[2rem] overflow-hidden">
                     <SingleScreenshot src={header.screenshots[0]} />
                   </div>
                   <img src="/misc/iphone-frame.webp" alt="iphone-frame" className="relative z-10 h-full" />
