@@ -42,10 +42,10 @@ const Navbar = () => {
             <Link href="/">
               <div className="flex items-center space-x-3">
                 <Image
-                  src="/favicon/logo.webp"
-                  width={31.02}
-                  height={40}
-                  className="w-full h-10 md:h-14"
+                  src="/favicon/logo.png"
+                  width={64}
+                  height={64}
+                  className="w-full h-10 md:h-12"
                   alt="Website-Logo"
                 />
                 <span
@@ -84,9 +84,9 @@ const Navbar = () => {
                 Login
               </button> */}
               <Link href="/#header">
-              <button className="px-6 py-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/80 text-white rounded-lg font-medium transition-all duration-300 transform cursor-pointer hover:scale-105 shadow-lg hover:shadow-xl">
-                Join For Free
-              </button>
+                <button className="px-6 py-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/80 text-white rounded-lg font-medium transition-all duration-300 transform cursor-pointer hover:scale-105 shadow-lg hover:shadow-xl">
+                  Join For Free
+                </button>
               </Link>
             </div>
 
@@ -120,14 +120,14 @@ const Navbar = () => {
           }`}
         >
           {/* Mobile Menu Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
+          <div className="flex items-center justify-between pl-6 pr-3 py-4 border-b border-gray-200">
             <Link href="/">
               <div className="flex items-center space-x-3">
                 <Image
-                  src="/favicon/logo.webp"
-                  width={31.02}
-                  height={40}
-                  className="w-full h-10 md:h-14"
+                  src="/favicon/logo.png"
+                  width={64}
+                  height={64}
+                  className="w-full h-10 md:h-12"
                   alt="Website-Logo"
                 />
                 <span className="text-2xl font-bold transition-colors duration-300 text-gray-900 ">Muslifie</span>

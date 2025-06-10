@@ -129,7 +129,7 @@ const templateConfig = {
           title: "Discover Halal Spots",
           subtitle:
             "Browse nearby halal restaurants, prayer spaces, and local Muslim-friendly services curated and reviewed by the community.",
-          image: "/screenshots/discover-halal-img.webp",
+          image: "/screenshots/discover-halal-img-2.webp",
         },
         {
           title: "Get Real-Time Guidance",
