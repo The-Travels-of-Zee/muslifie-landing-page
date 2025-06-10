@@ -1,7 +1,6 @@
 import { motion } from "@/lib/motion";
 
 function SingleScreenshot({ index, src }) {
-
   return (
     <motion.img
       src={src}

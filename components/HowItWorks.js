@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/AnimatedText";
 import clsx from "clsx";
 import { motion } from "@/lib/motion";
+import SingleScreenshot from "./SingleScreenshot";
 
 function HowItWorks({ howItWorks }) {
   if (!howItWorks) return null;
@@ -122,20 +123,17 @@ function HowItWorks({ howItWorks }) {
                     className="flex-1"
                   >
                     <div className="relative group max-w-xs mx-auto">
-                      <div className="relative h-80 lg:h-96 transition-transform duration-300 group-hover:scale-105">
-                        {/* Screenshot positioned inside the frame */}
-                        <div className="absolute top-[6px] right-[6px] lg:right-[74px] z-0">
-                          <img
-                            src={step.image}
-                            alt={`${step.title} screenshot`}
-                            className="h-[312px] lg:h-[372px] w-full object-cover rounded-[1rem] 2xs:rounded-[2rem]"
-                          />
+                      <div className="relative h-80 lg:h-96 w-full transition-transform duration-300 group-hover:scale-105">
+                        {/* Screenshot container — precisely aligned */}
+                        <div className="absolute top-[7px] left-[7px] lg:left-[9px] w-[91%] lg:w-[55%] h-full rounded-2xl lg:rounded-3xl overflow-hidden">
+                          <SingleScreenshot src={step.image} />
                         </div>
-                        {/* iPhone frame overlay */}
+
+                        {/* iPhone frame on top */}
                         <img
                           src="/misc/iphone-frame.webp"
                           alt="iphone-frame"
-                          className="relative z-10 w-full h-full object-contain"
+                          className="relative z-10 h-[104%] lg:h-[103%] w-auto pointer-events-none"
                         />
                       </div>
                     </div>
