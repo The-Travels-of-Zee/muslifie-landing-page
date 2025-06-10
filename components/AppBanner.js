@@ -4,6 +4,7 @@ import IPhoneFrame from "@/components/IPhoneFrame";
 import { motion } from "@/lib/motion";
 import clsx from "clsx";
 import Link from "next/link";
+import SingleScreenshot from "./SingleScreenshot";
 
 function AppBanner() {
   const { googlePlayLink, appStoreLink, appBanner } = useContext(ConfigContext);
@@ -175,9 +176,13 @@ function AppBanner() {
                     <div className="absolute inset-0 bg-black/10 rounded-3xl blur-xl scale-105 translate-y-8" />
 
                     {/* Phone frame with enhanced styling */}
-                    <div className="relative">
+                    {/* <div className="relative">
                       <IPhoneFrame src={src} className={"rounded-4xl h-full"} />
+                    </div> */}
+                    <div className="absolute top-2 left-3 w-[calc(100%-24px)] h-[calc(100%-16px)] rounded-4xl overflow-hidden">
+                      <SingleScreenshot src={src} />
                     </div>
+                    <img src="/misc/iphone-frame.webp" alt="iphone-frame" className="relative z-10 h-full" />
 
                     {/* Floating elements around phones */}
                     {index === 0 && (

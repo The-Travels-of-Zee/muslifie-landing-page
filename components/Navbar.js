@@ -3,7 +3,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { ConfigContext } from "@/utils/configContext";
-import Image from "next/image";
 
 const Navbar = () => {
   const { name, showThemeSwitch, topNavbar, theme } = useContext(ConfigContext);
@@ -41,13 +40,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link href="/">
               <div className="flex items-center space-x-3">
-                <Image
-                  src="/favicon/logo.png"
-                  width={64}
-                  height={64}
-                  className="w-full h-10 md:h-12"
-                  alt="Website-Logo"
-                />
+                <img src="/favicon/logo.png" className="w-full h-10 md:h-12" alt="Website-Logo" />
                 <span
                   className={`text-2xl font-bold transition-colors duration-300 ${
                     scrolled ? "text-gray-900" : "text-white"
@@ -123,13 +116,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between pl-6 pr-3 py-4 border-b border-gray-200">
             <Link href="/">
               <div className="flex items-center space-x-3">
-                <Image
-                  src="/favicon/logo.png"
-                  width={64}
-                  height={64}
-                  className="w-full h-10 md:h-12"
-                  alt="Website-Logo"
-                />
+                <img src="/favicon/logo.png" className="w-full h-10 md:h-12" alt="Website-Logo" />
                 <span className="text-2xl font-bold transition-colors duration-300 text-gray-900 ">Muslifie</span>
               </div>
             </Link>
