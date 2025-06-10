@@ -5,10 +5,10 @@ import Footer from "@/components/Footer";
 export const metadata = {
   metadataBase: new URL("https://muslifie.com/"),
   title: "Muslifie",
-  description: "All-in-One travel app for Muslims",
+  description: "All-in-One travel app for All.",
   openGraph: {
     title: "Muslifie",
-    description: "All-in-One travel app for Muslims",
+    description: "All-in-One travel app for All.",
     url: "./",
     siteName: "Muslifie",
     images: ["/favicon/icon-512x512.png"],
@@ -17,7 +17,7 @@ export const metadata = {
   },
   twitter: {
     title: "Muslifie",
-    description: "All-in-One travel app for Muslims",
+    description: "All-in-One travel app for All.",
     card: "summary_large_image",
     images: ["/favicon/icon-512x512.png"],
   },
