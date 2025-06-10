@@ -124,11 +124,11 @@ function HowItWorks({ howItWorks }) {
                     <div className="relative group max-w-xs mx-auto">
                       <div className="relative h-80 lg:h-96 transition-transform duration-300 group-hover:scale-105">
                         {/* Screenshot positioned inside the frame */}
-                        <div className="absolute top-1.5 right-1.5 lg:right-18.5 z-0">
+                        <div className="absolute top-[6px] right-[6px] lg:right-[74px] z-0">
                           <img
                             src={step.image}
                             alt={`${step.title} screenshot`}
-                            className="h-78 lg:h-93 w-full object-cover rounded-[1rem] 2xs:rounded-[2rem]"
+                            className="h-[312px] lg:h-[372px] w-full object-cover rounded-[1rem] 2xs:rounded-[2rem]"
                           />
                         </div>
                         {/* iPhone frame overlay */}
