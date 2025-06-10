@@ -120,10 +120,10 @@ const templateConfig = {
           image: "/screenshots/join-app-img.webp",
         },
         {
-          title: "Set Your Preferences",
+          title: "Select Your Preferences",
           subtitle:
             "Tell us what matters to you, halal food types, prayer space preferences, destinations of interest, so we can personalize your experience.",
-          image: "/screenshots/set-preferences-img-2.webp",
+          image: "/screenshots/set-preferences-img-3.webp",
         },
         {
           title: "Discover Halal Spots",
