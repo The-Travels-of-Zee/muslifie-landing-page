@@ -125,7 +125,7 @@ function HowItWorks({ howItWorks }) {
                     <div className="relative group max-w-xs mx-auto">
                       <div className="relative h-80 lg:h-96 w-full transition-transform duration-300 group-hover:scale-105">
                         {/* Screenshot container — precisely aligned */}
-                        <div className="absolute top-[7px] left-[7px] lg:left-[9px] w-[91%] lg:w-[55%] h-full rounded-2xl lg:rounded-3xl overflow-hidden">
+                        <div className="absolute left-[7px] lg:left-[9px] top-[4px] md:top-[6px] lg:top-[7px] w-[91.5%] lg:w-[55%] h-full rounded-2xl lg:rounded-3xl overflow-hidden">
                           <SingleScreenshot src={step.image} />
                         </div>
 
@@ -133,7 +133,7 @@ function HowItWorks({ howItWorks }) {
                         <img
                           src="/misc/iphone-frame.webp"
                           alt="iphone-frame"
-                          className="relative z-10 h-[104%] lg:h-[103%] w-auto pointer-events-none"
+                          className="relative z-10 h-[102%] lg:h-[103%] w-auto pointer-events-none"
                         />
                       </div>
                     </div>
