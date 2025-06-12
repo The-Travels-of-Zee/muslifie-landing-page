@@ -40,7 +40,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link href="/">
               <div className="flex items-center space-x-3">
-                <img src="/favicon/logo.png" className="w-full h-10 md:h-12" alt="Website-Logo" />
+                <img src="/favicon/logo.png" className="w-12 h-12" alt="Website-Logo" />
                 <span
                   className={`text-2xl font-bold transition-colors duration-300 ${
                     scrolled ? "text-gray-900" : "text-white"
@@ -116,7 +116,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between pl-6 pr-3 py-4 border-b border-gray-200">
             <Link href="/">
               <div className="flex items-center space-x-3">
-                <img src="/favicon/logo.png" className="w-full h-10 md:h-12" alt="Website-Logo" />
+                <img src="/favicon/logo.png" className="w-12 h-12" alt="Website-Logo" />
                 <span className="text-2xl font-bold transition-colors duration-300 text-gray-900 ">Muslifie</span>
               </div>
             </Link>

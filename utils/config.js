@@ -59,7 +59,7 @@ const templateConfig = {
     title: "Download On The First Day Of Launch!",
     subtitle:
       "Discover halal-friendly travel like never before, all at your reach. Find nearby halal food, prayer spaces, and more, anytime, anywhere. Download Muslifie and travel with peace of mind.",
-    screenshots: ["/screenshots/homepage-screenshot-img.webp", "/screenshots/realtime-guidance-img.webp"],
+    screenshots: ["/screenshots/appbanner-home-screen.webp", "/screenshots/appbanner-guidance-screen.webp"],
   },
   home: {
     seo: {
