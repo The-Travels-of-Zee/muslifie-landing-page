@@ -179,14 +179,15 @@ function AppBanner() {
                     {/* <div className="relative">
                       <IPhoneFrame src={src} className={"rounded-4xl h-full"} />
                     </div> */}
-                    <div className="absolute top-2 md:top-3 lg:top-2 left-3 sm:left-4 md:left-4 lg:left-3 md:w-[92%] h-[calc(100%-18px)] md:h-[calc(100%-22px)] aspect-[9/19.5] lg:w-[calc(100%-24px)] lg:h-[calc(100%-16px)] rounded-[48px] lg:rounded-4xl overflow-hidden">
+                    {/* <div className="relative top-2 md:top-3 lg:top-2 left-3 sm:left-4 md:left-4 lg:left-3 md:w-[92%] h-[calc(100%-18px)] md:h-[calc(100%-22px)] aspect-[9/19.5] lg:w-[calc(100%-24px)] lg:h-[calc(100%-16px)] rounded-[48px] lg:rounded-4xl overflow-hidden">
                       <SingleScreenshot src={src} />
-                    </div>
-                    <img
+                    </div> */}
+                    {/* <img
                       src="/misc/iphone-frame.webp"
                       alt="iphone-frame"
                       className="relative z-10 h-[103%] w-auto pointer-events-none"
-                    />
+                    /> */}
+                    <img src={src} alt={src}  />
 
                     {/* Floating elements around phones */}
                     {index === 0 && (
