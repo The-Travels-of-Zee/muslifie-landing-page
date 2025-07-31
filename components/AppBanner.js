@@ -1,14 +1,9 @@
-import { useContext } from "react";
-import { ConfigContext } from "@/utils/configContext";
-import IPhoneFrame from "@/components/IPhoneFrame";
 import { motion } from "@/lib/motion";
 import clsx from "clsx";
 import Link from "next/link";
-import SingleScreenshot from "./SingleScreenshot";
+import { appBanner, googlePlayLink, appStoreLink } from "@/constants";
 
 function AppBanner() {
-  const { googlePlayLink, appStoreLink, appBanner } = useContext(ConfigContext);
-
   if (!appBanner) return null;
 
   return (
