@@ -1,7 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Calendar, Clock, User, Tag, ArrowLeft, Share2, BookmarkPlus, Eye, ArrowUp, Link2 } from "lucide-react";
+import { Calendar, Clock, User, Tag, ArrowLeft, Eye } from "lucide-react";
 import Markdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import Link from "next/link";
@@ -23,9 +22,11 @@ const RelatedPosts = ({ relatedPosts = [] }) => {
             whileHover={{ y: -5 }}
             className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
           >
-            {post.image && <img src={post.image} alt={post.title} className="w-full h-32 object-cover" />}
+            {post.image && <img src={post.image} alt={post.title} className="w-full h-64 md:h-32 object-cover" />}
             <div className="p-4">
-              <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">{post.title}</h3>
+              <Link href={`/blog/${post.slug}`}>
+                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">{post.title}</h3>
+              </Link>
               <div className="flex items-center gap-1 text-sm text-gray-500">
                 <Clock className="w-4 h-4" />
                 <span>{post.readTime}</span>
@@ -107,7 +108,7 @@ const BlogPage = ({ blogData, relatedPosts }) => {
             <motion.button
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-2 bg-white/90 backdrop-blur-sm text-gray-900 px-4 py-2 rounded-full hover:bg-white transition-all shadow-lg"
+              className="flex items-center gap-2 bg-white/90 backdrop-blur-sm text-gray-900 px-4 py-2 rounded-full hover:bg-white transition-all shadow-lg cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Blogs
@@ -174,9 +175,9 @@ const BlogPage = ({ blogData, relatedPosts }) => {
                 {blogData.content}
               </Markdown>
             </article>
-            <RelatedPosts relatedPosts={relatedPosts} />
           </motion.div>
         </div>
+        <RelatedPosts relatedPosts={relatedPosts} />
       </div>
 
       <ScrollToTop />

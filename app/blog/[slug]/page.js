@@ -40,7 +40,8 @@ async function getAllBlogs() {
 }
 
 export default async function BlogPostPage({ params }) {
-  const blogData = await getBlogPost(params.slug);
+  const { slug } = await params;
+  const blogData = await getBlogPost(slug);
 
   if (!blogData) {
     notFound();
@@ -67,7 +68,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for each blog post
 export async function generateMetadata({ params }) {
-  const blogData = await getBlogPost(params.slug);
+  const { slug } = await params;
+  const blogData = await getBlogPost(slug);
 
   if (!blogData) {
     return {

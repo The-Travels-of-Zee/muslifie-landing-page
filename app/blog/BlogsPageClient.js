@@ -5,16 +5,7 @@ import { motion } from "framer-motion";
 import { Search, Calendar, Clock, User, Tag, ArrowRight, Filter } from "lucide-react";
 import Link from "next/link";
 
-const categories = [
-  "All",
-  "Travel Tips",
-  "Destinations",
-  "Travel",
-  "Halal Food",
-  "Hotels",
-  "Prayer & Mosques",
-  "Cultural Etiquette",
-];
+const categories = ["All", "Travel Tips", "Destinations", "Guides", "Halal Food", "Hotels", "Culture"];
 
 const sortOptions = [
   { value: "newest", label: "Newest First" },
@@ -46,67 +37,67 @@ const BlogCard = ({ post }) => {
       transition={{ duration: 0.6 }}
       className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2 h-full flex flex-col"
     >
-      {/* Image */}
-      <div className="relative overflow-hidden">
-        <img
-          src={post.image || "https://via.placeholder.com/400x200?text=Blog+Image"}
-          alt={post.title}
-          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <Link href={`/blog/${post.slug}`}>
+        {/* Image */}
+        <div className="relative overflow-hidden">
+          <img
+            src={post.image || "https://via.placeholder.com/400x200?text=Blog+Image"}
+            alt={post.title}
+            className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-        {/* Category Badge */}
-        <div className="absolute top-4 left-4">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/90 text-gray-800 backdrop-blur-sm">
-            <Tag className="w-3 h-3 mr-1" />
-            {post.category}
-          </span>
-        </div>
-
-        {post.featured && (
-          <div className="absolute top-4 right-4">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-orange-500 to-red-500 text-white">
-              Featured
+          {/* Category Badge */}
+          <div className="absolute top-4 left-4">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/90 text-gray-800 backdrop-blur-sm">
+              <Tag className="w-3 h-3 mr-1" />
+              {post.category}
             </span>
           </div>
-        )}
-      </div>
 
-      {/* Content */}
-      <div className="p-6 flex-1 flex flex-col">
-        {/* Meta Information */}
-        <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-          <div className="flex items-center gap-1">
-            <Calendar className="w-4 h-4" />
-            <span>{new Date(post.date).toLocaleDateString()}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Clock className="w-4 h-4" />
-            <span>{post.readTime}</span>
-          </div>
+          {post.featured && (
+            <div className="absolute top-4 right-4">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-orange-500 to-red-500 text-white">
+                Featured
+              </span>
+            </div>
+          )}
         </div>
 
-        {/* Title and Subtitle */}
-        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
-          {post.title}
-        </h3>
+        {/* Content */}
+        <div className="p-6 flex-1 flex flex-col">
+          {/* Meta Information */}
+          <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
+              <span>{new Date(post.date).toLocaleDateString()}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              <span>{post.readTime}</span>
+            </div>
+          </div>
 
-        <p className="text-base text-gray-600 mb-4 flex-1 line-clamp-3">{post.subtitle}</p>
+          {/* Title and Subtitle */}
+          <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+            {post.title}
+          </h3>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {post.tags?.slice(0, 3).map((tag, tagIndex) => (
-            <span
-              key={tagIndex}
-              className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors duration-200"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+          <p className="text-base text-gray-600 mb-4 flex-1 line-clamp-3">{post.subtitle}</p>
 
-        {/* Read More */}
-        <Link href={`/blog/${post.slug}`}>
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {post.tags?.slice(0, 3).map((tag, tagIndex) => (
+              <span
+                key={tagIndex}
+                className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors duration-200"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {/* Read More */}
           <motion.div
             whileHover={{ x: 5 }}
             className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700 transition-colors duration-200 cursor-pointer mt-auto"
@@ -114,8 +105,8 @@ const BlogCard = ({ post }) => {
             <span>Read More</span>
             <ArrowRight className="w-4 h-4" />
           </motion.div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </motion.article>
   );
 };

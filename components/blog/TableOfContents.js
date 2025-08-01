@@ -56,7 +56,7 @@ const TableOfContents = ({ content }) => {
           <li key={index} className={heading.level === 3 ? "ml-4" : ""}>
             <button
               onClick={() => scrollToHeading(heading.id)}
-              className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-left w-full"
+              className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-left w-full cursor-pointer"
             >
               {heading.text}
             </button>
