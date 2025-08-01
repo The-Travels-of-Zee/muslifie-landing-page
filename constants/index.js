@@ -35,7 +35,7 @@ export const footer = {
     privacyPolicy: true,
   },
   poweredBy: {
-    title: "The Travels of Zee",
+    title: "Muslifie",
     link: "https://business.thetravelsofzee.com/",
   },
   socials: {

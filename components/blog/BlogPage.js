@@ -75,7 +75,14 @@ const BlogPage = ({ blogData, relatedPosts }) => {
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-6">
             {[
               { icon: User, text: blogData.author },
-              { icon: Calendar, text: new Date(blogData.date).toLocaleDateString() },
+              {
+                icon: Calendar,
+                text: new Date(blogData.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                }),
+              },
               { icon: Clock, text: blogData.readTime },
               { icon: Eye, text: blogData.views },
             ].map(({ icon: Icon, text }, i) => (

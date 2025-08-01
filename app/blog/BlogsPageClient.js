@@ -70,7 +70,9 @@ const BlogCard = ({ post }) => {
           <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
             <div className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
-              <span>{new Date(post.date).toLocaleDateString()}</span>
+              <span>
+                {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+              </span>
             </div>
             <div className="flex items-center gap-1">
               <Clock className="w-4 h-4" />

@@ -41,7 +41,7 @@ export default async function BlogPage() {
 
 // Add metadata
 export const metadata = {
-  title: "Our Blog - Halal-Friendly Travel Guides | The Travels of Zee",
+  title: "Our Blog - Halal-Friendly Travel Guides | Muslifie",
   description:
     "Discover halal-friendly spots, connect with the community, and travel with peace of mind. Read our latest travel guides and tips.",
   openGraph: {
