@@ -1,6 +1,6 @@
 import AnimatedText from "@/components/AnimatedText";
 import clsx from "clsx";
-import { motion } from "@/lib/motion";
+import { motion } from "framer-motion";
 import SingleScreenshot from "./SingleScreenshot";
 import { howItWorks } from "@/constants";
 
@@ -17,7 +17,8 @@ function HowItWorks() {
         <div className="text-center mb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}sddddddddddddddddddddddddddddddddddddddddddddd
+            whileInView={{ opacity: 1, y: 0 }}
+            sddddddddddddddddddddddddddddddddddddddddddddd
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="space-y-6"

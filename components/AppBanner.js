@@ -1,4 +1,5 @@
-import { motion } from "@/lib/motion";
+"use client";
+import { motion } from "framer-motion";
 import clsx from "clsx";
 import Link from "next/link";
 import { appBanner, googlePlayLink, appStoreLink } from "@/constants";
@@ -182,7 +183,7 @@ function AppBanner() {
                       alt="iphone-frame"
                       className="relative z-10 h-[103%] w-auto pointer-events-none"
                     /> */}
-                    <img src={src} alt={src}  />
+                    <img src={src} alt={src} />
 
                     {/* Floating elements around phones */}
                     {index === 0 && (

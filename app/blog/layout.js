@@ -1,3 +1,5 @@
+import AppBanner from "@/components/AppBanner";
+
 export const metadata = {
   metadataBase: new URL("https://muslifie.com/blogs"),
   title: "Blogs - Muslifie",
@@ -20,7 +22,12 @@ export const metadata = {
 };
 
 const AllBlogsLayout = ({ children }) => {
-  return <main>{children}</main>;
+  return (
+    <main>
+      {children}
+      <AppBanner />
+    </main>
+  );
 };
 
 export default AllBlogsLayout;

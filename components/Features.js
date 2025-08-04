@@ -1,6 +1,6 @@
 import AnimatedText from "@/components/AnimatedText";
 import clsx from "clsx";
-import { motion } from "@/lib/motion";
+import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { features } from "@/constants";
 

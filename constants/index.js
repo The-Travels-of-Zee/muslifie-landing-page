@@ -60,7 +60,7 @@ export const topNavbar = {
   hideAppStore: false,
   hideGooglePlay: false,
   links: [
-    { href: "#header", title: "Home", icon: Home },
+    { href: "/", title: "Home", icon: Home },
     { href: "#features", title: "Features", icon: Star },
     { href: "#how-it-works", title: "How it works", icon: Rocket },
     { href: "#faq", title: "FAQ", icon: HelpCircle },

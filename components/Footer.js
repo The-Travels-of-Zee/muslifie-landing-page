@@ -1,6 +1,6 @@
 "use client";
 import { FaLinkedinIn } from "react-icons/fa6";
-import { motion } from "@/lib/motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { footer } from "@/constants";
 

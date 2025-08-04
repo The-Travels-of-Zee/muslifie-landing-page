@@ -1,6 +1,6 @@
 import AnimatedText from "@/components/AnimatedText";
 import clsx from "clsx";
-import { motion } from "@/lib/motion";
+import { motion } from "framer-motion";
 import { useContext } from "react";
 import { ConfigContext } from "@/utils/configContext";
 import Link from "next/link";

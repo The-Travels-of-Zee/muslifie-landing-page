@@ -3,7 +3,7 @@
 import AnimatedText from "@/components/AnimatedText";
 import NeonHexagon from "@/public/svg/neonHexagon";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { motion } from "@/lib/motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { faq } from "@/constants";
 
