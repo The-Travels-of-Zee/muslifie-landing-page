@@ -1,14 +1,10 @@
-import { useContext } from "react";
-import { ConfigContext } from "@/utils/configContext";
-import IPhoneFrame from "@/components/IPhoneFrame";
-import { motion } from "@/lib/motion";
+"use client";
+import { motion } from "framer-motion";
 import clsx from "clsx";
 import Link from "next/link";
-import SingleScreenshot from "./SingleScreenshot";
+import { appBanner, googlePlayLink, appStoreLink } from "@/constants";
 
 function AppBanner() {
-  const { googlePlayLink, appStoreLink, appBanner } = useContext(ConfigContext);
-
   if (!appBanner) return null;
 
   return (
@@ -187,7 +183,7 @@ function AppBanner() {
                       alt="iphone-frame"
                       className="relative z-10 h-[103%] w-auto pointer-events-none"
                     /> */}
-                    <img src={src} alt={src}  />
+                    <img src={src} alt={src} />
 
                     {/* Floating elements around phones */}
                     {index === 0 && (

@@ -1,18 +1,13 @@
 "use client";
 
 import AnimatedText from "@/components/AnimatedText";
-import { useContext } from "react";
-import { ConfigContext } from "@/utils/configContext";
 import NeonHexagon from "@/public/svg/neonHexagon";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { motion } from "@/lib/motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
+import { faq } from "@/constants";
 
 function Faq() {
-  const {
-    home: { faq },
-  } = useContext(ConfigContext);
-
   if (!faq) return null;
 
   return (

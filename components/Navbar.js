@@ -1,11 +1,10 @@
 "use client";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { ConfigContext } from "@/utils/configContext";
+import { topNavbar } from "@/constants";
 
 const Navbar = () => {
-  const { name, showThemeSwitch, topNavbar, theme } = useContext(ConfigContext);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -76,7 +75,7 @@ const Navbar = () => {
               >
                 Login
               </button> */}
-              <Link href="/#header">
+              <Link href="/">
                 <button className="px-6 py-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/80 text-white rounded-lg font-medium transition-all duration-300 transform cursor-pointer hover:scale-105 shadow-lg hover:shadow-xl">
                   Join For Free
                 </button>
@@ -155,7 +154,7 @@ const Navbar = () => {
               <User size={20} className="inline mr-3" />
               Login
             </button> */}
-            <Link href="/#header" onClick={closeMenu}>
+            <Link href="/" onClick={closeMenu}>
               <button className="w-full p-4 bg-gradient-to-r from-primary to-(--primary-light) text-white rounded-xl font-medium hover:from-primary/90 hover:to-(--primary-light)/90 cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Join For Free
               </button>

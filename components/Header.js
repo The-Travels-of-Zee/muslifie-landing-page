@@ -1,10 +1,11 @@
 "use client";
-import { motion } from "@/lib/motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import SingleScreenshot from "@/components/SingleScreenshot";
 import InputEmail from "./InputEmail";
+import { header } from "@/constants";
 
-function Header({ header, partners }) {
+function Header() {
   const [selectedType, setSelectedType] = useState("users"); // Default to "users"
   const [newsletterType, setNewsletterType] = useState("users"); // For InputEmail component
 

@@ -1,4 +1,4 @@
-import { motion } from "@/lib/motion";
+import { motion } from "framer-motion";
 
 function SingleScreenshot({ index, src }) {
   return (

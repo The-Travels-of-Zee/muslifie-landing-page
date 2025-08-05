@@ -1,6 +1,6 @@
 import React from "react";
 import { DollarSign, Users, BookOpen, Trash2, BarChart2, UserX2, BookPlus } from "lucide-react";
-import { motion } from "@/lib/motion";
+import { motion } from "framer-motion";
 import { Bar, Line } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Tooltip } from "chart.js";
 import AnimatedText from "./AnimatedText";
