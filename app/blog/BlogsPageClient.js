@@ -2,8 +2,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, Calendar, Clock, User, Tag, ArrowRight, Filter } from "lucide-react";
-import Link from "next/link";
+import { Search, Filter } from "lucide-react";
+import BlogCard from "@/components/blog/BlogCard";
+import Pagination from "@/components/blog/Pagination";
 
 const categories = ["All", "Travel Tips", "Destinations", "Guides", "Halal Food", "Hotels", "Culture"];
 
@@ -13,6 +14,8 @@ const sortOptions = [
   { value: "title", label: "Title A-Z" },
   { value: "readTime", label: "Read Time" },
 ];
+
+const POSTS_PER_PAGE = 9; // Number of posts to show per page
 
 // AnimatedText component
 const AnimatedText = ({ text, className = "" }) => {
@@ -28,97 +31,14 @@ const AnimatedText = ({ text, className = "" }) => {
   );
 };
 
-// BlogCard component
-const BlogCard = ({ post }) => {
-  return (
-    <motion.article
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2 h-full flex flex-col"
-    >
-      <Link href={`/blog/${post.slug}`}>
-        {/* Image */}
-        <div className="relative overflow-hidden">
-          <img
-            src={post.image || "https://via.placeholder.com/400x200?text=Blog+Image"}
-            alt={post.title}
-            className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-          {/* Category Badge */}
-          <div className="absolute top-4 left-4">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/90 text-gray-800 backdrop-blur-sm">
-              <Tag className="w-3 h-3 mr-1" />
-              {post.category}
-            </span>
-          </div>
-
-          {post.featured && (
-            <div className="absolute top-4 right-4">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-orange-500 to-red-500 text-white">
-                Featured
-              </span>
-            </div>
-          )}
-        </div>
-
-        {/* Content */}
-        <div className="p-6 flex-1 flex flex-col">
-          {/* Meta Information */}
-          <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>
-                {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-              </span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>{post.readTime}</span>
-            </div>
-          </div>
-
-          {/* Title and Subtitle */}
-          <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
-            {post.title}
-          </h3>
-
-          <p className="text-base text-gray-600 mb-4 flex-1 line-clamp-3">{post.subtitle}</p>
-
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            {post.tags?.slice(0, 3).map((tag, tagIndex) => (
-              <span
-                key={tagIndex}
-                className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors duration-200"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          {/* Read More */}
-          <motion.div
-            whileHover={{ x: 5 }}
-            className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700 transition-colors duration-200 cursor-pointer mt-auto"
-          >
-            <span>Read More</span>
-            <ArrowRight className="w-4 h-4" />
-          </motion.div>
-        </div>
-      </Link>
-    </motion.article>
-  );
-};
-
 // Main BlogsPageClient component
 const BlogsPage = ({ blogPosts }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("newest");
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginatedPosts, setPaginatedPosts] = useState([]);
 
   // Filter and sort posts
   useEffect(() => {
@@ -156,7 +76,32 @@ const BlogsPage = ({ blogPosts }) => {
     });
 
     setFilteredPosts(filtered);
+    setCurrentPage(1); // Reset to first page when filters change
   }, [searchTerm, selectedCategory, sortBy, blogPosts]);
+
+  // Handle pagination
+  useEffect(() => {
+    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+    const endIndex = startIndex + POSTS_PER_PAGE;
+    setPaginatedPosts(filteredPosts.slice(startIndex, endIndex));
+  }, [filteredPosts, currentPage]);
+
+  // Calculate total pages
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+
+  // Handle page change
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    // Smooth scroll to top of results
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Clear all filters
+  const clearFilters = () => {
+    setSearchTerm("");
+    setSelectedCategory("All");
+    setSortBy("newest");
+  };
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-blue-50/50 via-white to-purple-50/30 min-h-screen">
@@ -233,20 +178,32 @@ const BlogsPage = ({ blogPosts }) => {
                   ))}
                 </div>
 
-                {/* Sort Dropdown */}
-                <div className="flex items-center gap-2">
-                  <span className="text-sm text-gray-700 whitespace-nowrap">Sort by:</span>
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="px-3 py-2 text-gray-700 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 cursor-pointer"
-                  >
-                    {sortOptions.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
+                {/* Sort Dropdown and Clear Filters */}
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-gray-700 whitespace-nowrap">Sort by:</span>
+                    <select
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value)}
+                      className="px-3 py-2 text-gray-700 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 cursor-pointer"
+                    >
+                      {sortOptions.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Clear Filters Button */}
+                  {(searchTerm || selectedCategory !== "All" || sortBy !== "newest") && (
+                    <button
+                      onClick={clearFilters}
+                      className="px-4 py-2 text-sm font-medium text-red-600 bg-white border border-red-200 rounded-lg hover:bg-red-50 hover:border-red-300 transition-all duration-200"
+                    >
+                      Clear Filters
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -261,14 +218,31 @@ const BlogsPage = ({ blogPosts }) => {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">
               <div className="text-6xl mb-4">📝</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">No articles found</h3>
-              <p className="text-gray-600">Try adjusting your search terms or category filter.</p>
+              <p className="text-gray-600 mb-4">Try adjusting your search terms or category filter.</p>
+              <button
+                onClick={clearFilters}
+                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-all duration-200"
+              >
+                Clear All Filters
+              </button>
             </motion.div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post, index) => (
-                <BlogCard key={post.slug || index} post={post} />
-              ))}
-            </div>
+            <>
+              {/* Posts Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {paginatedPosts.map((post, index) => (
+                  <BlogCard key={post.slug || index} post={post} animationDelay={index * 0.1} />
+                ))}
+              </div>
+
+              {/* Pagination */}
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+                className="mt-12"
+              />
+            </>
           )}
 
           {/* Results Count */}
@@ -276,12 +250,19 @@ const BlogsPage = ({ blogPosts }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-center mt-12"
+            className="text-center mt-8"
           >
             <p className="text-gray-600">
-              Showing {filteredPosts.length} of {blogPosts.length} articles
-              {selectedCategory !== "All" && ` in "${selectedCategory}"`}
-              {searchTerm && ` matching "${searchTerm}"`}
+              {filteredPosts.length > 0 ? (
+                <>
+                  Showing {(currentPage - 1) * POSTS_PER_PAGE + 1}-
+                  {Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)} of {filteredPosts.length} articles
+                  {selectedCategory !== "All" && ` in "${selectedCategory}"`}
+                  {searchTerm && ` matching "${searchTerm}"`}
+                </>
+              ) : (
+                "No articles to display"
+              )}
             </p>
           </motion.div>
         </div>
