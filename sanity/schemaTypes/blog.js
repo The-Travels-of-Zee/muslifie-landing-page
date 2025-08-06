@@ -84,14 +84,6 @@ export const blog = defineType({
       description: "Add relevant tags for better discoverability",
     }),
     defineField({
-      name: "description",
-      title: "Meta Description",
-      type: "text",
-      rows: 3,
-      validation: (Rule) => Rule.max(160).warning("Meta descriptions should be under 160 characters for SEO"),
-      description: "Brief description for SEO and social media sharing",
-    }),
-    defineField({
       name: "image",
       title: "Featured Image",
       type: "image",
@@ -138,12 +130,6 @@ export const blog = defineType({
         collapsible: true,
         collapsed: true,
       },
-    }),
-    defineField({
-      name: "publishedAt",
-      title: "Published At",
-      type: "datetime",
-      description: "When the post should be visible to the public",
     }),
     defineField({
       name: "featured",

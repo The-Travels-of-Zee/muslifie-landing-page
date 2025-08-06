@@ -66,7 +66,7 @@ const BlogCard = ({ post, animationDelay = 0, showTags = true, showMeta = true, 
               {post.readTime && (
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
-                  <span>{post.readTime} mins</span>
+                  <span>{post.readTime} mins read</span>
                 </div>
               )}
             </div>

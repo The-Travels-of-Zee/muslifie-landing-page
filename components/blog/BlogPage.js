@@ -57,7 +57,7 @@ const BlogPage = ({ blogData, relatedPosts }) => {
                   day: "numeric",
                 }),
               },
-              { icon: Clock, text: blogData.readTime + " mins" },
+              { icon: Clock, text: blogData.readTime + " mins read" },
               { icon: Eye, text: blogData.views + "k" },
             ].map(({ icon: Icon, text }, i) => (
               <div key={i} className="flex items-center gap-2">
@@ -118,17 +118,17 @@ const BlogPage = ({ blogData, relatedPosts }) => {
                 rehypePlugins={[rehypeSlug]}
                 components={{
                   h1: ({ children, id }) => (
-                    <h1 id={id} className="text-3xl font-bold text-gray-900 mb-6 mt-8 scroll-mt-8">
+                    <h1 id={id} className="text-3xl font-bold text-gray-900 mb-6 mt-8 scroll-mt-24">
                       {children}
                     </h1>
                   ),
                   h2: ({ children, id }) => (
-                    <h2 id={id} className="text-2xl font-bold text-gray-900 mb-4 mt-8 scroll-mt-8">
+                    <h2 id={id} className="text-2xl font-bold text-gray-900 mb-4 mt-8 scroll-mt-24">
                       {children}
                     </h2>
                   ),
                   h3: ({ children, id }) => (
-                    <h3 id={id} className="text-xl font-bold text-gray-900 mb-3 mt-6 scroll-mt-8">
+                    <h3 id={id} className="text-xl font-bold text-gray-900 mb-3 mt-6 scroll-mt-24">
                       {children}
                     </h3>
                   ),

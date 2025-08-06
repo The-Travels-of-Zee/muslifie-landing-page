@@ -24,7 +24,7 @@ const RelatedPosts = ({ relatedPosts = [] }) => {
               </Link>
               <div className="flex items-center gap-1 text-sm text-gray-500">
                 <Clock className="w-4 h-4" />
-                <span>{post.readTime}</span>
+                <span>{post.readTime} mins read</span>
               </div>
             </div>
           </motion.article>

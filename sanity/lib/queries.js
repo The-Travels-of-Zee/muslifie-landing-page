@@ -78,6 +78,7 @@ export const RELATED_POSTS_QUERY = defineQuery(`
     title,
     subtitle,
     slug,
+    readTime,
     _createdAt,
     author->{
       _id,
