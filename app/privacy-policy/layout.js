@@ -1,3 +1,6 @@
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+
 export const metadata = {
   metadataBase: new URL("https://muslifie.com/privacy-policy"),
   title: "Privacy Policy - Muslifie",
@@ -20,7 +23,13 @@ export const metadata = {
 };
 
 const PrivacyPolicyLayout = ({ children }) => {
-  return <main>{children}</main>;
+  return (
+    <main>
+      <Navbar />
+      {children}
+      <Footer />
+    </main>
+  );
 };
 
 export default PrivacyPolicyLayout;

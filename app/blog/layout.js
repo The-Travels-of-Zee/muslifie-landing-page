@@ -1,4 +1,6 @@
 import AppBanner from "@/components/AppBanner";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   metadataBase: new URL("https://muslifie.com/blogs"),
@@ -24,8 +26,10 @@ export const metadata = {
 const AllBlogsLayout = ({ children }) => {
   return (
     <main>
+      <Navbar />
       {children}
       <AppBanner />
+      <Footer />
     </main>
   );
 };

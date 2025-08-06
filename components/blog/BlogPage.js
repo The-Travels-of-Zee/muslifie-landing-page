@@ -15,7 +15,11 @@ const BlogPage = ({ blogData, relatedPosts }) => {
     <div className="relative bg-gradient-to-br from-blue-50/50 via-white to-purple-50/30 min-h-screen">
       {/* Hero Section */}
       <div className="relative h-96 md:h-[500px] overflow-hidden">
-        <img src={blogData.image} alt={blogData.title} className="w-full h-full aspect-square object-cover" />
+        <img
+          src={blogData.image.asset.url}
+          alt={blogData.image.alt}
+          className="w-full h-full aspect-square object-cover"
+        />
 
         {/* Overlays */}
         <div className="absolute inset-0">
@@ -44,7 +48,7 @@ const BlogPage = ({ blogData, relatedPosts }) => {
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-6">
             {[
-              { icon: User, text: blogData.author },
+              { icon: User, text: blogData.author?.name },
               {
                 icon: Calendar,
                 text: new Date(blogData.date).toLocaleDateString("en-US", {
@@ -53,8 +57,8 @@ const BlogPage = ({ blogData, relatedPosts }) => {
                   day: "numeric",
                 }),
               },
-              { icon: Clock, text: blogData.readTime },
-              { icon: Eye, text: blogData.views },
+              { icon: Clock, text: blogData.readTime + " mins" },
+              { icon: Eye, text: blogData.views + "k" },
             ].map(({ icon: Icon, text }, i) => (
               <div key={i} className="flex items-center gap-2">
                 <Icon className="w-4 h-4" />
