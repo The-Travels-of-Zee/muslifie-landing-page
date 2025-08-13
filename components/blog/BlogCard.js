@@ -6,8 +6,6 @@ import { Calendar, Clock, Tag, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const BlogCard = ({ post, animationDelay = 0, showTags = true, showMeta = true, className = "" }) => {
-  console.log(post);
-
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}

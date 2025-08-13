@@ -58,7 +58,7 @@ const BlogPage = ({ blogData, relatedPosts }) => {
                 }),
               },
               { icon: Clock, text: blogData.readTime + " mins read" },
-              { icon: Eye, text: blogData.views + "k" },
+              { icon: Eye, text: blogData.views + "k views" },
             ].map(({ icon: Icon, text }, i) => (
               <div key={i} className="flex items-center gap-2">
                 <Icon className="w-4 h-4" />

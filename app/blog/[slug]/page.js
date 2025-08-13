@@ -1,4 +1,3 @@
-// app/blog/[slug]/page.js
 import { notFound } from "next/navigation";
 import BlogPage from "@/components/blog/BlogPage";
 import { client } from "@/sanity/lib/client";
