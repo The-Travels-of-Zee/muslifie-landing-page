@@ -15,14 +15,16 @@ const RelatedPosts = ({ relatedPosts = [] }) => {
             whileHover={{ y: -5 }}
             className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
           >
-            {post.image && <img src={post.image} alt={post.title} className="w-full h-64 md:h-32 object-cover" />}
+            {post.image && (
+              <img src={post.image.asset.url} alt={post.title} className="w-full h-64 md:h-32 object-cover" />
+            )}
             <div className="p-4">
-              <Link href={`/blog/${post.slug}`}>
+              <Link href={`/blog/${post.slug.current}`}>
                 <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">{post.title}</h3>
               </Link>
               <div className="flex items-center gap-1 text-sm text-gray-500">
                 <Clock className="w-4 h-4" />
-                <span>{post.readTime}</span>
+                <span>{post.readTime} mins read</span>
               </div>
             </div>
           </motion.article>

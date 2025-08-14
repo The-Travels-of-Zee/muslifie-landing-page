@@ -1,42 +1,28 @@
-// app/blog/[slug]/page.js
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import BlogPage from "@/components/blog/BlogPage";
+import { client } from "@/sanity/lib/client";
+import { BLOG_POST_QUERY, RELATED_POSTS_QUERY, ALL_BLOG_SLUGS_QUERY } from "@/sanity/lib/queries";
 
-// Get single blog post
+// Fetch a single blog post by slug
 async function getBlogPost(slug) {
   try {
-    const filePath = path.join(process.cwd(), "content/blogs", `${slug}.mdx`);
-    const fileContents = fs.readFileSync(filePath, "utf8");
-    const { data, content } = matter(fileContents);
-
-    return {
-      ...data,
-      content,
-      slug,
-    };
+    const blog = await client.fetch(BLOG_POST_QUERY, { slug });
+    return blog;
   } catch (error) {
+    console.error("Error fetching blog post:", error);
     return null;
   }
 }
 
-// Get all blog posts for related posts
-async function getAllBlogs() {
-  const blogsDirectory = path.join(process.cwd(), "content/blogs");
-  const filenames = fs.readdirSync(blogsDirectory);
-
-  return filenames.map((filename) => {
-    const filePath = path.join(blogsDirectory, filename);
-    const fileContents = fs.readFileSync(filePath, "utf8");
-    const { data } = matter(fileContents);
-
-    return {
-      ...data,
-      slug: filename.replace(".mdx", ""),
-    };
-  });
+// Fetch related blog posts (same category, not the current post)
+async function getRelatedPosts(category, slug) {
+  try {
+    const posts = await client.fetch(RELATED_POSTS_QUERY, { category, slug });
+    return posts;
+  } catch (error) {
+    console.error("Error fetching related posts:", error);
+    return [];
+  }
 }
 
 export default async function BlogPostPage({ params }) {
@@ -47,22 +33,17 @@ export default async function BlogPostPage({ params }) {
     notFound();
   }
 
-  // Get related posts (same category, excluding current post)
-  const allBlogs = await getAllBlogs();
-  const relatedPosts = allBlogs
-    .filter((blog) => blog.category === blogData.category && blog.slug !== blogData.slug)
-    .slice(0, 3);
+  const relatedPosts = await getRelatedPosts(blogData.category, slug);
 
   return <BlogPage blogData={blogData} relatedPosts={relatedPosts} />;
 }
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
-  const blogsDirectory = path.join(process.cwd(), "content/blogs");
-  const filenames = fs.readdirSync(blogsDirectory);
+  const slugs = await client.fetch(ALL_BLOG_SLUGS_QUERY);
 
-  return filenames.map((filename) => ({
-    slug: filename.replace(".mdx", ""),
+  return slugs.map(({ slug }) => ({
+    slug,
   }));
 }
 
@@ -79,19 +60,19 @@ export async function generateMetadata({ params }) {
 
   return {
     title: blogData.title,
-    description: blogData.subtitle,
-    authors: [{ name: blogData.author }],
+    description: blogData.subtitle || blogData.description,
+    author: blogData.author?.name ? [{ name: blogData.author.name }] : [],
     openGraph: {
       title: blogData.title,
-      description: blogData.subtitle,
+      description: blogData.subtitle || blogData.description,
       images: [blogData.image],
       type: "article",
-      publishedTime: blogData.date,
+      publishedTime: blogData.publishedAt || blogData._createdAt,
     },
     twitter: {
       card: "summary_large_image",
       title: blogData.title,
-      description: blogData.subtitle,
+      description: blogData.subtitle || blogData.description,
       images: [blogData.image],
     },
   };

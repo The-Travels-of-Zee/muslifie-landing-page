@@ -17,7 +17,7 @@ const BlogCard = ({ post, animationDelay = 0, showTags = true, showMeta = true, 
         {/* Image */}
         <div className="relative overflow-hidden">
           <img
-            src={post.image || "https://via.placeholder.com/400x200?text=Blog+Image"}
+            src={post.image}
             alt={post.title}
             className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
             loading="lazy"
@@ -64,7 +64,7 @@ const BlogCard = ({ post, animationDelay = 0, showTags = true, showMeta = true, 
               {post.readTime && (
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
-                  <span>{post.readTime}</span>
+                  <span>{post.readTime} mins read</span>
                 </div>
               )}
             </div>

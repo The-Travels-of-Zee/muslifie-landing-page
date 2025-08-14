@@ -1,6 +1,4 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 export const metadata = {
   metadataBase: new URL("https://muslifie.com/"),
@@ -36,9 +34,7 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={"font-notosans antialiased"}>
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
