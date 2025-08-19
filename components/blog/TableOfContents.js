@@ -46,24 +46,18 @@ const TableOfContents = ({ content }) => {
   };
 
   return (
-    <div className="bg-gray-50 rounded-xl p-6 mb-8">
-      <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-        <Tag className="w-5 h-5" />
-        Table of Contents
-      </h3>
-      <ul className="space-y-2">
-        {headings.map((heading, index) => (
-          <li key={index} className={heading.level === 3 ? "ml-4" : ""}>
-            <button
-              onClick={() => scrollToHeading(heading.id)}
-              className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-left w-full cursor-pointer"
-            >
-              {heading.text}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className="space-y-2">
+      {headings.map((heading, index) => (
+        <li key={index} className={heading.level === 3 ? "ml-4" : ""}>
+          <button
+            onClick={() => scrollToHeading(heading.id)}
+            className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-left w-full cursor-pointer"
+          >
+            {heading.text}
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 };
 
