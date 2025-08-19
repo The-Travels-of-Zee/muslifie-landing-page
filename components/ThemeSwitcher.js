@@ -1,3 +1,4 @@
+"use client"
 import { useContext, useEffect, useState } from "react";
 import { ConfigContext } from "@/utils/configContext";
 

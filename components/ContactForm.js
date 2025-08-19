@@ -1,12 +1,13 @@
+"use client";
 import { useState } from "react";
 import { Send, Mail, User, Target, MessageSquare } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
-export default function ContactForm() {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -250,4 +251,6 @@ export default function ContactForm() {
       </div>
     </section>
   );
-}
+};
+
+export default ContactForm;
