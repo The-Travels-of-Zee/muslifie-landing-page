@@ -1,3 +1,4 @@
+"use client";
 import AnimatedText from "@/components/AnimatedText";
 import clsx from "clsx";
 import { motion } from "framer-motion";
