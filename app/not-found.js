@@ -1,6 +1,3 @@
-// app/not-found.js
-"use client";
-
 import { Home } from "lucide-react";
 import Link from "next/link";
 
