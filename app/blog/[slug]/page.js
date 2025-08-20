@@ -35,7 +35,7 @@ export default async function BlogPostPage({ params }) {
 
   const relatedPosts = await getRelatedPosts(blogData.category, slug);
 
-  return <BlogPage blogData={blogData} relatedPosts={relatedPosts} />;
+  return <BlogPage blogData={blogData} relatedPosts={relatedPosts} slug={slug} />;
 }
 
 // Generate static params for all blog posts
@@ -65,7 +65,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: blogData.title,
       description: blogData.subtitle || blogData.description,
-      images: [blogData.image],
+      images: [blogData.image.asset.url],
       type: "article",
       publishedTime: blogData.publishedAt || blogData._createdAt,
     },
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: blogData.title,
       description: blogData.subtitle || blogData.description,
-      images: [blogData.image],
+      images: [blogData.image.asset.url],
     },
   };
 }

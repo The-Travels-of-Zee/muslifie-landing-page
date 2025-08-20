@@ -24,6 +24,7 @@ import CopyLinkButton from "./CopyLinkButton";
 import TableOfContents from "./TableOfContents";
 import ScrollToTop from "./ScrollToTop";
 import RelatedPosts from "./RelatedPosts";
+import DisqusComments from "../DisqusComments";
 
 // Enhanced Code Block Component
 const CodeBlock = ({ children, language }) => {
@@ -140,7 +141,11 @@ const ReadingProgress = () => {
 };
 
 // Main component
-const BlogPage = ({ blogData, relatedPosts }) => {
+const BlogPage = ({ blogData, relatedPosts, slug }) => {
+  // Create the full URL for Disqus
+  const baseUrl = typeof window !== "undefined" ? window.location.origin : "https://muslifie.com";
+  const fullUrl = `${baseUrl}/blog/${slug}`;
+
   return (
     <div className="relative bg-gradient-to-br from-blue-50/30 via-white to-purple-50/20 min-h-screen">
       <ReadingProgress />
@@ -360,6 +365,14 @@ const BlogPage = ({ blogData, relatedPosts }) => {
                 {blogData.content}
               </Markdown>
             </article>
+
+            {/* Disqus Comments Section */}
+            <DisqusComments
+              shortname={process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}
+              identifier={slug}
+              title={blogData.title}
+              url={fullUrl}
+            />
           </motion.div>
         </div>
 
