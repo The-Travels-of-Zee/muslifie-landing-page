@@ -1,6 +1,5 @@
 import "./globals.css";
 import Script from "next/script";
-import AnalyticsProvider from "@/components/AnalyticsProvider";
 
 export const metadata = {
   metadataBase: new URL("https://muslifie.com/"),
@@ -56,7 +55,6 @@ export default function RootLayout({ children }) {
                 });
               `}
             </Script>
-            <AnalyticsProvider />
           </>
         )}
       </body>
