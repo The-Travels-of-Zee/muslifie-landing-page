@@ -14,3 +14,4 @@ function PrivacyPolicy() {
 }
 
 export default PrivacyPolicy;
+export const dynamic = "force-dynamic";
