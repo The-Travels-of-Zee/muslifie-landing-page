@@ -19,7 +19,7 @@ import {
 import Markdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import CopyLinkButton from "./CopyLinkButton";
 import TableOfContents from "./TableOfContents";
 import ScrollToTop from "./ScrollToTop";
@@ -240,7 +240,9 @@ const BlogPage = ({ blogData, relatedPosts, slug }) => {
             </motion.button>
           </Link>
 
-          <CopyLinkButton />
+          <Suspense>
+            <CopyLinkButton />
+          </Suspense>
         </div>
 
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-7 gap-12">
