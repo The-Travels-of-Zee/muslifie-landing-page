@@ -1,13 +1,16 @@
 "use client";
 import React from "react";
-import { DiscussionEmbed } from "disqus-react";
+import { CommentCount, DiscussionEmbed } from "disqus-react";
 import { MessageSquare } from "lucide-react";
 
 const DisqusComments = ({ shortname, identifier, title, url }) => {
+  console.log("DisqusComments props:", { identifier, title, url });
+
   const disqusConfig = {
-    url,
-    identifier,
-    title,
+    url: url,
+    identifier: identifier,
+    title: title,
+    language: "en-US",
   };
 
   return (
@@ -19,6 +22,9 @@ const DisqusComments = ({ shortname, identifier, title, url }) => {
             Comments & Discussion
           </h3>
         </div>
+        <CommentCount shortname={shortname} config={disqusConfig}>
+          Comments
+        </CommentCount>
         <DiscussionEmbed shortname={shortname} config={disqusConfig} />
       </div>
     </div>
