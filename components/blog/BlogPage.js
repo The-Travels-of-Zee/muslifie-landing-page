@@ -143,7 +143,7 @@ const ReadingProgress = () => {
 // Main component
 const BlogPage = ({ blogData, relatedPosts, slug }) => {
   // Create the full URL for Disqus
-  const baseUrl = typeof window !== "undefined" ? window.location.origin : "https://muslifie.com";
+  const baseUrl = typeof window !== "undefined" ? window.location.origin : "https://www.muslifie.com";
   const fullUrl = `${baseUrl}/blog/${slug}`;
 
   return (
