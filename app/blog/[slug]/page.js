@@ -58,25 +58,42 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const { seo = {}, title, subtitle, excerpt, image, author, date } = blogData;
+
+  // Use SEO fields if available, otherwise fallback to main fields
+  const metaTitle = seo.metaTitle || title;
+  const metaDescription = seo.metaDescription || excerpt || subtitle;
+  const socialImage = seo.ogImage?.asset?.url || image?.asset?.url;
+
   return {
-    title: blogData.title,
-    description: blogData.subtitle || blogData.description,
-    author: blogData.author?.name ? [{ name: blogData.author.name }] : [],
-    openGraph: {
-      title: blogData.title,
-      description: blogData.subtitle || blogData.description,
-      images: [blogData.image.asset.url],
-      type: "article",
-      publishedTime: blogData.publishedAt || blogData._createdAt,
+    title: metaTitle,
+    description: metaDescription,
+    authors: author?.name ? [{ name: author.name }] : [],
+    keywords: seo.focusKeyword ? [seo.focusKeyword, ...(seo.secondaryKeywords || [])] : undefined,
+
+    // Robots
+    robots: {
+      index: !seo.noIndex,
+      follow: !seo.noFollow,
     },
+
+    // Open Graph
+    openGraph: {
+      title: seo.ogTitle || metaTitle,
+      description: seo.ogDescription || metaDescription,
+      type: seo.ogType || "article",
+      publishedTime: date,
+      images: socialImage ? [{ url: socialImage }] : undefined,
+    },
+
+    // Twitter
     twitter: {
-      card: "summary_large_image",
-      title: blogData.title,
-      description: blogData.subtitle || blogData.description,
-      images: [blogData.image.asset.url],
+      card: seo.twitterCard || "summary_large_image",
+      title: seo.twitterTitle || seo.ogTitle || metaTitle,
+      description: seo.twitterDescription || seo.ogDescription || metaDescription,
+      images: seo.twitterImage?.asset?.url || socialImage ? [seo.twitterImage?.asset?.url || socialImage] : undefined,
     },
   };
 }
-
 
 export const dynamic = "force-dynamic";
