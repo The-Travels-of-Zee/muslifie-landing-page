@@ -15,10 +15,8 @@ export const templateTheme = {
   backgroundGrid: false,
 };
 
-export const templateLogo = "/logo.svg";
-
-export const appStoreLink = "https://apps.apple.com/us/app/google/id284815942";
-export const googlePlayLink = "https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox";
+export const appStoreLink = "https://apps.apple.com/pk/app/muslifie/id6749224199";
+export const googlePlayLink = "https://play.google.com/store/apps/details?id=com.app.muslifie&pcampaignid=web_share";
 
 export const header = {
   cta: "Join The Waitlist",
@@ -35,7 +33,7 @@ export const footer = {
     privacyPolicy: true,
   },
   poweredBy: {
-    title: "Muslifie",
+    title: "The Travels Of Zee",
     link: "https://business.thetravelsofzee.com/",
   },
   socials: {

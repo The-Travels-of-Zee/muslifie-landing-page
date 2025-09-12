@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { topNavbar } from "@/constants";
+import { topNavbar, appStoreLink, googlePlayLink } from "@/constants";
+import { FaAppStoreIos } from "react-icons/fa6";
+import { BiLogoPlayStore } from "react-icons/bi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,13 +18,8 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <>
@@ -66,20 +63,32 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Desktop CTA */}
+            {/* Desktop Store Icons */}
             <div className="hidden lg:flex items-center space-x-4">
-              {/* <button
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                  scrolled ? "text-gray-700 hover:bg-gray-100" : "text-white/90 hover:bg-white/10"
-                }`}
-              >
-                Login
-              </button> */}
-              <Link href="/">
-                <button className="px-6 py-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/80 text-white rounded-lg font-medium transition-all duration-300 transform cursor-pointer hover:scale-105 shadow-lg hover:shadow-xl">
-                  Join For Free
-                </button>
-              </Link>
+              {googlePlayLink && (
+                <a
+                  href={googlePlayLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-2 rounded-full transition-colors duration-300 ${
+                    scrolled ? "text-gray-700 hover:text-(--secondary)" : "text-white hover:text-(--primary)"
+                  }`}
+                >
+                  <BiLogoPlayStore size={32} />
+                </a>
+              )}
+              {appStoreLink && (
+                <a
+                  href={appStoreLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-2 rounded-full transition-colors duration-300 ${
+                    scrolled ? "text-gray-700 hover:text-(--secondary)" : "text-white hover:text-(--primary)"
+                  }`}
+                >
+                  <FaAppStoreIos size={28} />
+                </a>
+              )}
             </div>
 
             {/* Mobile Menu Button */}
@@ -116,7 +125,7 @@ const Navbar = () => {
             <Link href="/">
               <div className="flex items-center space-x-3">
                 <img src="/favicon/logo.png" className="w-12 h-12" alt="Website-Logo" />
-                <span className="text-2xl font-bold transition-colors duration-300 text-gray-900 ">Muslifie</span>
+                <span className="text-2xl font-bold transition-colors duration-300 text-gray-900">Muslifie</span>
               </div>
             </Link>
             <button
@@ -148,17 +157,30 @@ const Navbar = () => {
             })}
           </div>
 
-          {/* Mobile Menu CTA */}
-          <div className="p-6 space-y-4 border-t border-gray-200 mt-auto">
-            {/* <button className="w-full p-4 text-gray-700 hover:bg-gray-50 rounded-xl transition-colors duration-300 font-medium">
-              <User size={20} className="inline mr-3" />
-              Login
-            </button> */}
-            <Link href="/" onClick={closeMenu}>
-              <button className="w-full p-4 bg-gradient-to-r from-primary to-(--primary-light) text-white rounded-xl font-medium hover:from-primary/90 hover:to-(--primary-light)/90 cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Join For Free
-              </button>
-            </Link>
+          {/* Mobile Store Icons */}
+          <div className="p-6 border-t border-gray-200 mt-auto flex items-center gap-6">
+            {googlePlayLink && (
+              <a
+                href={googlePlayLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className="text-gray-700 hover:text-emerald-600 transition-colors duration-300"
+              >
+                <BiLogoPlayStore size={32} />
+              </a>
+            )}
+            {appStoreLink && (
+              <a
+                href={appStoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className="text-gray-700 hover:text-emerald-600 transition-colors duration-300"
+              >
+                <FaAppStoreIos size={32} />
+              </a>
+            )}
           </div>
         </div>
       </div>

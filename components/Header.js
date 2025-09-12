@@ -1,20 +1,21 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
+// import { useState } from "react";
 import SingleScreenshot from "@/components/SingleScreenshot";
-import InputEmail from "./InputEmail";
-import { header } from "@/constants";
+// import InputEmail from "./InputEmail";
+import { appStoreLink, googlePlayLink, header } from "@/constants";
+import Link from "next/link";
 
 function Header() {
-  const [selectedType, setSelectedType] = useState("users"); // Default to "users"
-  const [newsletterType, setNewsletterType] = useState("users"); // For InputEmail component
+  // const [selectedType, setSelectedType] = useState("users"); // Default to "users"
+  // const [newsletterType, setNewsletterType] = useState("users"); // For InputEmail component
 
   if (!header) return null;
 
-  const handleTypeToggle = (type) => {
-    setSelectedType(type);
-    setNewsletterType(type === "guide" ? "guide" : "users");
-  };
+  // const handleTypeToggle = (type) => {
+  //   setSelectedType(type);
+  //   setNewsletterType(type === "guide" ? "guide" : "users");
+  // };
 
   return (
     <section id={header.id} className="relative min-h-screen overflow-hidden pt-16 md:pt-8">
@@ -89,21 +90,64 @@ function Header() {
                   duration: 0.6,
                   ease: "easeOut",
                 }}
-                className="text-md sm:text-lg lg:text-xl text-gray-200 font-notosans mb-8 lg:mb-12 leading-relaxed max-w-xl mx-auto lg:mx-0"
+                className="text-md sm:text-lg lg:text-xl text-gray-200 font-notosans mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0"
               >
                 For Muslims who have difficulty finding halal food and prayer destinations. Connect with our community
                 of travelers and local guides.
               </motion.p>
 
-              {/* CTA Buttons */}
+              {/* Store Links with QR Codes */}
               <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                className="grid grid-cols-2 gap-4 items-center justify-center"
+              >
+                {/* Google Play Column */}
+                {googlePlayLink && (
+                  <div className="flex flex-col items-center gap-3">
+                    <img
+                      src="/stores/muslifie-playstore-qr.svg"
+                      alt="Google Play QR Code"
+                      className="w-36 sm:w-44 md:w-52 rounded-xl lg:rounded-4xl hidden md:block"
+                    />
+                    <p className="text-xs sm:text-sm text-gray-300 hidden md:block">Scan to download</p>
+                    <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }} className="group">
+                      <a href={googlePlayLink} target="_blank" className="block">
+                        <img className="h-12 max-w-[160px]" alt="google play logo" src="/stores/google-play.svg" />
+                      </a>
+                    </motion.div>
+                  </div>
+                )}
+
+                {/* App Store Column */}
+                {appStoreLink && (
+                  <div className="flex flex-col items-center gap-3">
+                    <img
+                      src="/stores/muslifie-appstore-qr.svg"
+                      alt="App Store QR Code"
+                      className="w-36 sm:w-44 md:w-52 rounded-xl lg:rounded-4xl hidden md:block"
+                    />
+                    <p className="text-xs sm:text-sm text-gray-300 hidden md:block">Scan to download</p>
+                    <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }} className="group">
+                      <a href={appStoreLink} target="_blank" className="block">
+                        <img className="h-12 max-w-[160px]" alt="app store logo" src="/stores/app-store.svg" />
+                      </a>
+                    </motion.div>
+                  </div>
+                )}
+              </motion.div>
+
+              {/* CTA Buttons (commented, preserved) */}
+              {/* <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="mb-8 lg:mb-12"
               >
                 <div className="max-w-md mx-auto lg:mx-0 space-y-6">
-                  {/* Toggle Buttons - Fixed scaling issue */}
                   <div className="flex bg-white/10 backdrop-blur-md rounded-full p-1 border border-white/20 overflow-hidden">
                     <button
                       onClick={() => handleTypeToggle("users")}
@@ -127,55 +171,19 @@ function Header() {
                     </button>
                   </div>
 
-                  {/* Description Text */}
                   <p className="text-sm text-white text-center">
                     {selectedType === "users"
                       ? "Get notified about halal restaurants and prayer spots in your travel destinations"
                       : "Share your local knowledge and help fellow Muslims discover halal options"}
                   </p>
-                  {/* Email Input */}
                   <InputEmail
                     title={selectedType === "users" ? "Join as Traveler" : "Join as Guide"}
                     apiUrl="/api/newsletter"
                     type={newsletterType}
                   />
                 </div>
-              </motion.div>
-
-              {/* User Avatars */}
-              {header.usersDescription && (
-                <motion.div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                  <div className="flex -space-x-3">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ scale: 0.5, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{
-                          delay: 1 + index * 0.1,
-                          type: "spring",
-                          stiffness: 200,
-                        }}
-                        className="w-10 h-10 rounded-full border-3 border-white shadow-lg overflow-hidden hover:scale-110 transition-transform duration-200"
-                      >
-                        <img
-                          src={`/avatars/${index + 1}.webp`}
-                          alt={`User ${index + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </motion.div>
-                    ))}
-                  </div>
-                  <motion.p
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1.3 }}
-                    className="text-sm sm:text-base text-white font-medium"
-                  >
-                    {header.usersDescription}
-                  </motion.p>
-                </motion.div>
-              )}
+              </motion.div> 
+              */}
             </div>
           </div>
         </div>
