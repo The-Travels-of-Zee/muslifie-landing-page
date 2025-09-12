@@ -81,25 +81,25 @@ function AppBanner() {
                 <div className="flex flex-wrap gap-4">
                   {googlePlayLink && (
                     <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }} className="group">
-                      <Link href={"/"} className="block">
+                      <a href={googlePlayLink} target="_blank" className="block">
                         <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-1 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                           <div className="bg-white rounded-xl p-2 flex items-center gap-3 hover:bg-gray-50 transition-colors">
                             <img className="h-12 w-full" alt="google play logo" src="/stores/google-play.svg" />
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </motion.div>
                   )}
 
                   {appStoreLink && (
                     <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }} className="group">
-                      <Link href={"/"} className="block">
+                      <a href={appStoreLink} target="_blank" className="block">
                         <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-1 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                           <div className="bg-white rounded-xl p-2 flex items-center gap-3 hover:bg-gray-50 transition-colors">
                             <img className="h-12 w-full" alt="app store logo" src="/stores/app-store.svg" />
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </motion.div>
                   )}
                 </div>
@@ -115,7 +115,7 @@ function AppBanner() {
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse" />
-                    <p className="text-purple-800 font-semibold">🚀 We'll notify you as soon as we launch!</p>
+                    <p className="text-purple-800 font-semibold">Download Muslifie App Now!</p>
                   </div>
                 </motion.div>
               </motion.div>
