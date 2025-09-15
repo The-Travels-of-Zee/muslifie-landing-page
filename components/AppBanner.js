@@ -52,7 +52,7 @@ function AppBanner() {
                     visible: { opacity: 1, y: 0 },
                   }}
                   transition={{ delay: 0.3, duration: 0.6 }}
-                  className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 bg-clip-text text-transparent leading-tight"
+                  className="pb-2 text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 bg-clip-text text-transparent leading-tight"
                 >
                   {appBanner.title}
                 </motion.h2>

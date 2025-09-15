@@ -68,7 +68,7 @@ export const topNavbar = {
 
 export const appBanner = {
   id: "app-banner",
-  title: "Download On The First Day Of Launch!",
+  title: "Start Your Journey With Muslifie!",
   subtitle:
     "Discover halal-friendly travel like never before, all at your reach. Find nearby halal food, prayer spaces, and more, anytime, anywhere. Download Muslifie and travel with peace of mind.",
   screenshots: ["/screenshots/appbanner-home-screen.webp", "/screenshots/appbanner-guidance-screen.webp"],
