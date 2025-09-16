@@ -481,6 +481,7 @@ Muslifie ensures secure and transparent payment handling through an **escrow-bas
 ## Platform Fees & Commission
 
 - **Service Fee:** Muslifie charges an estimated **20-30%** processing & service fee on all bookings.  
+- **Processing Fee:** 2.9% + $0.30 per transaction.  
 - **Guide Earnings:** Guides receive an estimated **70-80%** of the booking amount after completion.  
 - **Influencer Commission:** Influencers earn up to **15% commission** on bookings made with their promo codes.  
 - **Transparent Pricing:** All fees are displayed clearly during the booking process.  
