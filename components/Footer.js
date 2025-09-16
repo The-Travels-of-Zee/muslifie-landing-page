@@ -93,6 +93,14 @@ function Footer() {
                     Privacy Policy
                   </a>
                 )}
+                {legalLinks.paymentPolicy && (
+                  <a
+                    href="/payment-policy"
+                    className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
+                  >
+                    Payment Policy
+                  </a>
+                )}
                 {legalLinks.cookiesPolicy && (
                   <a
                     href="/cookies-policy"
