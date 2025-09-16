@@ -31,6 +31,7 @@ export const header = {
 export const footer = {
   legalLinks: {
     privacyPolicy: true,
+    paymentPolicy: true,
   },
   poweredBy: {
     title: "The Travels Of Zee",
@@ -149,36 +150,218 @@ export const howItWorks = {
 export const faq = {
   id: "faq",
   title: "Frequently Asked Questions",
-  qa: [
+  categories: [
     {
-      question: "What is Muslifie?",
-      answer:
-        "Muslifie is a travel companion app designed not only for Muslims but Everyone who want to explore the world while staying connected to their values. It helps you find halal restaurants, nearby prayer spaces, and connect with local Muslim-friendly services.",
+      title: "Getting Started",
+      color: "#6366F1",
+      faqs: [
+        {
+          question: "How do I become a verified guide on Muslifie?",
+          answer:
+            "To become a verified guide, complete your profile, upload required documents (ID, certifications), and submit for review. Our team typically reviews applications within 24-48 hours.",
+        },
+        {
+          question: "What documents do I need for verification?",
+          answer:
+            "You need a valid government ID, guide certification or relevant qualifications, and any Halal certificates if applicable.",
+        },
+        {
+          question: "How long does verification take?",
+          answer: "Verification typically takes 24-48 hours. You'll receive email updates on your application status.",
+        },
+      ],
     },
     {
-      question: "Is Muslifie only for Muslims?",
-      answer:
-        "Not at all! While Muslifie is designed with Muslim travelers in mind, anyone interested in halal food, cultural respect, and ethical travel is welcome to use the app.",
+      title: "Bookings & Tours",
+      color: "#22C55E",
+      faqs: [
+        {
+          question: "How do I manage my tour bookings?",
+          answer:
+            "Access your bookings through the main dashboard. You can view, confirm, modify, or cancel bookings as needed.",
+        },
+        {
+          question: "Can I set my own tour prices?",
+          answer:
+            "Yes, you have full control over your tour pricing. Set different rates for standard, premium, and luxury packages.",
+        },
+        {
+          question: "What happens if I need to cancel a tour?",
+          answer:
+            "If you need to cancel a tour as a guide/partner, you must immediately contact all booked travelers and our support team.",
+        },
+      ],
     },
     {
-      question: "How does Muslifie find halal places?",
-      answer:
-        "We combine community reviews, verified data, and local guide contributions to ensure listings are as authentic and accurate as possible. Users can also suggest and review new places to keep the app fresh and relevant.",
+      title: "Account & Profile",
+      color: "#7C3AED",
+      faqs: [
+        {
+          question: "How do I update my profile information?",
+          answer:
+            "Go to Profile > Settings to update your personal information, contact details, preferences, and profile photo. Keep your information current for the best experience.",
+        },
+        {
+          question: "How do I delete my account?",
+          answer:
+            "Contact our support team to request account deletion. Please note this action is permanent and will remove all your data, bookings history, and earned commissions.",
+        },
+        {
+          question: "Why do I need to verify my phone number?",
+          answer:
+            "Phone verification enhances security, enables booking notifications, and allows guides to contact you directly. It's required for completing bookings.",
+        },
+      ],
     },
     {
-      question: "Can I contribute as a local guide?",
-      answer:
-        "Yes! Local Guides play a key role in Muslifie. You can share hidden halal gems, add prayer spaces, and help fellow travelers experience your city with ease and comfort.",
+      title: "Influencer Program",
+      color: "#8B5CF6",
+      faqs: [
+        {
+          question: "How do I join the Muslifie Influencer Program?",
+          answer:
+            "Apply through your profile settings. You need to meet minimum follower requirements and create content that aligns with Islamic values. Once approved, you can generate promo codes for tours.",
+        },
+        {
+          question: "How do promo codes work?",
+          answer:
+            "As an approved influencer, you can create custom promo codes offering discounts to travelers. Each code has usage limits, expiration dates, and tracks your referrals for commission calculation.",
+        },
+        {
+          question: "What commission do influencers earn?",
+          answer:
+            "Influencers earn up to 15% commission on successful bookings made with their promo codes. Commission rates vary based on performance and are paid monthly with minimum payout thresholds.",
+        },
+        {
+          question: "Can I track my promo code performance?",
+          answer:
+            "Yes, your influencer dashboard shows real-time statistics including code usage, bookings generated, commission earned, and payout history.",
+        },
+      ],
     },
     {
-      question: "Is there a cost to use Muslifie?",
-      answer:
-        "We don’t charge upfront. Instead, a small service fee is included in bookings or trips made through the app, and tour guides also contribute a portion of their earnings. This allows us to keep the app running, improve features, and support without placing extra burden on users.",
+      title: "Tours & Reviews",
+      color: "#06B6D4",
+      faqs: [
+        {
+          question: "How do I save tours to my wishlist?",
+          answer:
+            "Tap the heart icon on any tour to add it to your wishlist. Access your saved tours from your profile to book later or share with friends.",
+        },
+        {
+          question: "Can I leave reviews for tours and guides?",
+          answer:
+            "Yes, after completing a tour, you can rate and review both the tour experience and guide performance. Your feedback helps other travelers and maintains quality standards.",
+        },
+        {
+          question: "What tour categories are available?",
+          answer:
+            "We offer various categories including Walking Tours, Food Tours, Cultural Experiences, Historical Sites, Hiking Adventures, Shopping Tours, and more, all ensuring halal-friendly options.",
+        },
+        {
+          question: "How do I know if a tour is halal-friendly?",
+          answer:
+            "All tours on Muslifie are designed to be Muslim-friendly, featuring halal food options, prayer time considerations, and culturally appropriate activities, even in non-Muslim countries.",
+        },
+      ],
     },
     {
-      question: "Is my data safe with Muslifie?",
-      answer:
-        "Absolutely. We take your privacy seriously and follow industry best practices to keep your data secure. Your information is never shared without your permission.",
+      title: "Cancellations & Refunds",
+      color: "#E11D48",
+      faqs: [
+        {
+          question: "What is your cancellation policy?",
+          answer:
+            "Travelers can cancel bookings up to 24 hours before the scheduled time. However, we operate under a strict no-refund policy - all payments are final once confirmed.",
+        },
+        {
+          question: "Can I get a refund if the guide cancels?",
+          answer:
+            "Yes, if a guide cancels your tour, you will receive a full refund to your original payment method. This typically processes within 5-7 business days.",
+        },
+        {
+          question: "What happens in case of emergencies?",
+          answer:
+            "Emergency cancellations due to natural disasters, medical emergencies, or safety concerns are handled on a case-by-case basis by our support team.",
+        },
+        {
+          question: "Can I reschedule my booking?",
+          answer:
+            "Rescheduling is subject to guide availability and approval. Contact your guide directly or our support team to explore alternative dates.",
+        },
+      ],
+    },
+    {
+      title: "Safety & Guidelines",
+      color: "#EF4444",
+      faqs: [
+        {
+          question: "What safety measures are in place?",
+          answer:
+            "All guides undergo background checks and document verification. We provide 24/7 support, share emergency contacts with travelers, and maintain strict safety protocols.",
+        },
+        {
+          question: "What are the community guidelines?",
+          answer:
+            "Respect Islamic values, provide authentic experiences, maintain professionalism, ensure traveler safety, and follow local laws and customs at all times.",
+        },
+        {
+          question: "How do I report inappropriate behavior?",
+          answer:
+            "Use the in-app reporting feature or contact support immediately. We take all reports seriously and investigate violations of our community guidelines promptly.",
+        },
+        {
+          question: "Are prayer facilities available during tours?",
+          answer:
+            "Yes, our guides are trained to incorporate prayer times and locate nearby mosques or prayer facilities. This is part of our commitment to Muslim-friendly travel experiences.",
+        },
+      ],
+    },
+    {
+      title: "Payments & Earnings",
+      color: "#F59E0B",
+      faqs: [
+        {
+          question: "How does the escrow payment system work?",
+          answer:
+            "When travelers book your tour, payment is held securely in escrow. After successful tour completion, the funds are released to your Muslifie balance within 24 hours, minus platform fees. This protects both guides and travelers by ensuring payment security.",
+        },
+        {
+          question: "How do I receive payments and autopayouts?",
+          answer:
+            "After tour completion, payments are added to your Muslifie balance within 24 hours using our secure escrow system. You can then withdraw from your balance - if your country supports Stripe Connect, you'll receive automatic payouts to your linked account. Otherwise, you can withdraw to your bank details with a minimum of $50.",
+        },
+        {
+          question: "What are Stripe Connect autopayouts?",
+          answer:
+            "Stripe Connect enables automatic daily or weekly payouts directly to your bank account or debit card. It's available in 45+ countries and offers the lowest transaction fees with faster processing times.",
+        },
+        {
+          question: "What if my country doesn't support Stripe Connect?",
+          answer:
+            "If your country doesn't support Stripe Connect for autopayouts, you can add your bank account details for manual transfers. However, please note that bank transfer fees are higher than Stripe processing fees.",
+        },
+        {
+          question: "What are the platform and processing fees?",
+          answer:
+            "Muslifie charges an estimated 20-30% platform fee. For Stripe Connect users, processing fees are estimated 2.9% + $0.30 per transaction. Bank transfer fees vary by region but are typically 3-5% higher than Stripe fees.",
+        },
+        {
+          question: "How do I add my payment method?",
+          answer:
+            "Go to Profile > Settings > Payment Methods. You can either connect your Stripe account for autopayouts (recommended) or add bank account details if Stripe Connect isn't available in your country.",
+        },
+        {
+          question: "When can I withdraw my earnings?",
+          answer:
+            "Once earnings are added to your balance after tour completion, you can withdraw them immediately. With Stripe Connect, you can set up automatic payouts (daily/weekly) from your balance. For bank transfers, you can manually withdraw with a minimum of $50, and transfers typically take 3-5 business days.",
+        },
+        {
+          question: "Which countries support Stripe Connect?",
+          answer:
+            "Stripe Connect is available in 45+ countries including US, UK, Canada, Australia, most of Europe, and many others. Check our payment settings to see if it's available in your region.",
+        },
+      ],
     },
   ],
 };
@@ -258,6 +441,123 @@ Muslifie
 🕌 With sincerity and responsibility,  
 **Team Muslifie**
 
+`,
+};
+
+export const paymentPolicy = {
+  seo: {
+    title: "Payment Policy - Muslifie",
+    description: "Payment Policy",
+  },
+  content: `# Muslifie Payment Policy
+
+**Last Updated:** September 2025  
+**Effective Date:** Upon user acceptance  
+
+## Introduction
+
+Muslifie ensures secure and transparent payment handling through an **escrow-based system** with flexible payout options for guides and partners. This policy explains how payments, fees, withdrawals, and related processes are managed on our platform.
+
+---
+
+## Complete Payment Flow
+
+1. **Booking & Escrow**  
+   Traveler makes a booking → Payment is held securely in escrow until tour completion.
+
+2. **Tour Completion**  
+   Guide marks the tour as completed → System releases funds from escrow.
+
+3. **Balance Addition**  
+   Earnings are added to your Muslifie balance within 24 hours (minus platform fees).
+
+4. **Withdrawal Options**  
+   Withdraw from balance via **Stripe Connect autopayouts** or **manual bank transfers**.
+
+✅ *Escrow Protection ensures your payment is guaranteed once the tour is completed successfully.*
+
+---
+
+## Platform Fees & Commission
+
+- **Service Fee:** Muslifie charges an estimated **20-30%** processing & service fee on all bookings.  
+- **Guide Earnings:** Guides receive an estimated **70-80%** of the booking amount after completion.  
+- **Influencer Commission:** Influencers earn up to **15% commission** on bookings made with their promo codes.  
+- **Transparent Pricing:** All fees are displayed clearly during the booking process.  
+
+**Example:** $100 booking → Platform fee $20-$30 → Guide receives $70-$80 in balance.
+
+---
+
+## Escrow & Payment Security
+
+- **Secure Escrow:** All payments are held in escrow until tour completion, protecting both guides and travelers.  
+- **Payment Release:** Funds are automatically released to your balance within 24 hours after the tour is marked completed.  
+- **Completion Requirement:** Guide must mark the tour as completed to trigger payment release.  
+- **Dispute Protection:** Escrow ensures fair handling of payment disputes and cancellations.  
+- **Industry Standard:** Escrow follows best practices used by major booking platforms.  
+
+---
+
+## Payout Methods & Fees
+
+- **Stripe Connect (Recommended):**  
+  - Automatic daily/weekly payouts  
+  - Processing fee: **2.9% + $0.30 per transaction**  
+
+- **Bank Transfer Alternative:**  
+  - Manual withdrawals to bank account  
+  - Fees: **3-5% higher** than Stripe Connect  
+
+- **Country Availability:** Stripe Connect available in **45+ countries**.  
+- **Best Option:** Use Stripe Connect for lowest fees and fastest payouts.  
+
+---
+
+## Withdrawal Policy & Timeline
+
+- **Minimum Withdrawal:** $50  
+- **Stripe Connect Timeline:** Autopayouts on a daily or weekly schedule (configurable).  
+- **Bank Transfer Timeline:** 3-5 business days.  
+- **Balance Accumulation:** Earnings accumulate in your Muslifie balance with no expiration.  
+- **Withdrawal Methods:**  
+  - Stripe: bank account, debit card  
+  - Bank transfer: direct to account details  
+
+---
+
+## Booking Management & Cancellations
+
+- **Guide Cancellations:** Full refund automatically issued to the traveler.  
+- **Traveler Cancellations:** Strict **no-refund** policy.  
+- **Emergency Cancellations:** Natural disasters or safety emergencies handled case-by-case by support.  
+- **Quality Assurance:** Payments may be held if significant complaints or disputes arise.  
+
+---
+
+## Tax & Legal Compliance
+
+- **Tax Responsibility:** Guides are responsible for reporting earnings according to local tax laws.  
+- **Documentation:** Earnings reports available in your dashboard.  
+- **Policy Updates:** Changes to the policy will be communicated with **30 days notice**.  
+- **Regulatory Compliance:** All transactions comply with local and international financial regulations.  
+
+---
+
+## Payment Support
+
+Need help with payments, withdrawals, or fees? Our support team is available **24/7** to assist with:  
+- Payment processing questions  
+- Withdrawal issues  
+- Fee clarifications  
+- Escrow concerns  
+- Tax documentation requests  
+
+📧 [support@muslifie.com](mailto:support@muslifie.com)  
+
+---
+
+© 2025 Muslifie. All rights reserved.
 `,
 };
 

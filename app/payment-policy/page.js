@@ -1,7 +1,7 @@
 import Markdown from "react-markdown";
-import { privacyPolicy } from "@/constants";
+import { paymentPolicy } from "@/constants";
 
-function PrivacyPolicy() {
+function PaymentPolicy() {
   return (
     <main className="bg-gradient-to-b from-0% to-5% from-secondary/60 to-accent/50 min-h-screen pt-32 pb-20">
       <section className="max-w-screen-lg mx-auto px-4">
@@ -9,7 +9,7 @@ function PrivacyPolicy() {
           className="
             prose prose-lg md:prose-xl 
             prose-headings:font-bold prose-headings:text-gray-900 
-            prose-h1:text-4xl prose-h1:mb-6 prose-h1:text-center 
+            prose-h1:text-4xl prose-h1:mb-6 prose-h1:text-center prose-h1:text-gradient 
             prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-purple-700 
             prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-2 prose-h3:text-blue-700 
             prose-p:text-gray-700 prose-p:leading-relaxed 
@@ -23,11 +23,11 @@ function PrivacyPolicy() {
             max-w-none
           "
         >
-          <Markdown>{privacyPolicy.content}</Markdown>
+          <Markdown>{paymentPolicy.content}</Markdown>
         </article>
       </section>
     </main>
   );
 }
 
-export default PrivacyPolicy;
+export default PaymentPolicy;
