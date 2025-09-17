@@ -458,6 +458,10 @@ export const paymentPolicy = {
 
 Muslifie ensures secure and transparent payment handling through an **escrow-based system** with flexible payout options for guides and partners. This policy explains how payments, fees, withdrawals, and related processes are managed on our platform.
 
+Disclaimer on Split Payments
+
+Muslifie shall bear no responsibility or liability in the event that a Travel Partner elects to divide, split, or otherwise structure payments outside the platform, including but not limited to requesting partial payment in cash or other forms. Any such arrangement is made solely between the Travel Partner and the user. Travel Partners remain solely responsible for clearly disclosing in their service description any requirement for split or partial payments, whether prior to booking or subsequent thereto.
+
 ---
 
 ## Complete Payment Flow
