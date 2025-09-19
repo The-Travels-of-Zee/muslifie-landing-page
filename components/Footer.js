@@ -45,52 +45,37 @@ function Footer() {
 
           {/* Bottom section */}
           <div className="border-t border-white/20 pt-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Social links */}
               <motion.div
-                variants={{
-                  hidden: { opacity: 0, x: -30 },
-                  visible: { opacity: 1, x: 0 },
-                }}
+                variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 className="flex items-center gap-4"
               >
-                {socials &&
-                  socials.map((link, idx) => {
-                    const Icon = link.icon;
-                    return (
-                      link.href && (
-                        <a
-                          key={idx}
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group"
-                        >
-                          <Icon className="size-6 text-white group-hover:text-purple-200" />
-                        </a>
-                      )
-                    );
-                  })}
+                {socials?.map((link, idx) => {
+                  const Icon = link.icon;
+                  return (
+                    link.href && (
+                      <a
+                        key={idx}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group"
+                      >
+                        <Icon className="size-6 text-white group-hover:text-purple-200" />
+                      </a>
+                    )
+                  );
+                })}
               </motion.div>
 
-              {/* Legal links */}
+              {/* Legal + Contact */}
               <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
+                variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="flex flex-wrap items-center justify-center gap-6 text-sm"
               >
-                {legalLinks.termsAndConditions && (
-                  <a
-                    href="/terms-and-conditions"
-                    className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
-                  >
-                    Terms & Conditions
-                  </a>
-                )}
                 {legalLinks.privacyPolicy && (
                   <a
                     href="/privacy-policy"
@@ -107,45 +92,39 @@ function Footer() {
                     Payment Policy
                   </a>
                 )}
-                {legalLinks.cookiesPolicy && (
-                  <a
-                    href="/cookies-policy"
-                    className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
-                  >
-                    Cookies Policy
-                  </a>
-                )}
                 <a
                   href="mailto:support@muslifie.com"
-                  className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
+                  className="text-white/80 hover:text-white transition-colors duration-300 hover:underline text-sm"
                 >
                   support@muslifie.com
                 </a>
               </motion.div>
 
-              {/* Powered by and copyright */}
+              {/* Powered by */}
               <motion.div
-                variants={{
-                  hidden: { opacity: 0, x: 30 },
-                  visible: { opacity: 1, x: 0 },
-                }}
+                variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="flex flex-col items-center lg:items-end gap-2 text-sm"
               >
-                <p className="text-white/80">
-                  Powered by{" "}
+                <p className="text-white/80 leading-relaxed text-center lg:text-right">
+                  <span className="block">A product of</span>
                   <Link
                     href={poweredBy.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white font-semibold hover:text-purple-200 transition-colors duration-300"
+                    className="block font-semibold text-white hover:text-purple-200 transition-colors duration-300"
                   >
                     {poweredBy.title}
                   </Link>
+                  <span className="block">
+                    Registered in England &amp; Wales No. <span className="whitespace-nowrap">15611572</span>.
+                  </span>
                 </p>
-                <p className="text-white/60">All rights reserved © {new Date().getFullYear()}</p>
               </motion.div>
             </div>
+
+            {/* Copyright */}
+            <p className="pt-8 text-white/60 text-center text-sm">© {new Date().getFullYear()} All rights reserved</p>
           </div>
         </motion.div>
       </div>
