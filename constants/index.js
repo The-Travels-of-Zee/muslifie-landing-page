@@ -1,5 +1,6 @@
 // Keep icons at the top
 import { Home, Star, Rocket, HelpCircle, BookOpen } from "lucide-react";
+import { FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 export const templateName = "Muslifie";
 
@@ -35,15 +36,26 @@ export const footer = {
   },
   poweredBy: {
     title: "The Travels Of Zee",
-    link: "https://business.thetravelsofzee.com/",
+    link: "https://thetravelsofzee.com/",
   },
-  socials: {
-    instagram: "https://instagram.com/google",
-    facebook: "https://facebook.com/google",
-    twitter: "https://x.com/google",
-    upwork: "https://www.upwork.com/agencies/1900660843112486960/",
-    linkedin: "https://www.linkedin.com/company/Muslifie/",
-  },
+  socials: [
+    {
+      href: "https://www.instagram.com/muslifie?igsh=NHdpMjNybzNjZjBr&utm_source=qr",
+      icon: FaInstagram,
+    },
+    {
+      href: "https://www.tiktok.com/@muslifie?_t=ZS-8yPyvrQICPd&_r=1",
+      icon: FaTiktok,
+    },
+    {
+      href: "https://youtube.com/@muslifie?si=bcUBcLH2CCHMqAlJ",
+      icon: FaYoutube,
+    },
+    {
+      href: "https://www.linkedin.com/showcase/muslifie/",
+      icon: FaLinkedin,
+    },
+  ],
   links: [
     { href: "/#features", title: "Features" },
     { href: "/#how-it-works", title: "How it works" },
