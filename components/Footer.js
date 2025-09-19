@@ -1,5 +1,4 @@
 "use client";
-import { FaLinkedinIn } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { footer } from "@/constants";
@@ -56,16 +55,23 @@ function Footer() {
                 transition={{ delay: 0.3, duration: 0.6 }}
                 className="flex items-center gap-4"
               >
-                {socials.linkedin && (
-                  <a
-                    href={socials.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group"
-                  >
-                    <FaLinkedinIn className="size-6 text-white group-hover:text-purple-200" />
-                  </a>
-                )}
+                {socials &&
+                  socials.map((link, idx) => {
+                    const Icon = link.icon;
+                    return (
+                      link.href && (
+                        <a
+                          key={idx}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 group"
+                        >
+                          <Icon className="size-6 text-white group-hover:text-purple-200" />
+                        </a>
+                      )
+                    );
+                  })}
               </motion.div>
 
               {/* Legal links */}
@@ -109,6 +115,12 @@ function Footer() {
                     Cookies Policy
                   </a>
                 )}
+                <a
+                  href="mailto:support@muslifie.com"
+                  className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
+                >
+                  support@muslifie.com
+                </a>
               </motion.div>
 
               {/* Powered by and copyright */}
@@ -124,6 +136,8 @@ function Footer() {
                   Powered by{" "}
                   <Link
                     href={poweredBy.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white font-semibold hover:text-purple-200 transition-colors duration-300"
                   >
                     {poweredBy.title}
