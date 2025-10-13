@@ -242,7 +242,7 @@ export const faq = {
         {
           question: "What commission do influencers earn?",
           answer:
-            "Influencers earn up to 15% commission on successful bookings made with their promo codes. Commission rates vary based on performance and are paid monthly with minimum payout thresholds.",
+            "Influencers earn 5% commission on day trip bookings and 2.5% commission on package tour bookings made with their promo codes. Commissions are paid monthly with minimum payout thresholds.",
         },
         {
           question: "Can I track my promo code performance?",
@@ -334,9 +334,14 @@ export const faq = {
       color: "#F59E0B",
       faqs: [
         {
+          question: "What are the commission rates for guides?",
+          answer:
+            "Day Trips: Guides earn 85% (15% platform fee). Package Tours: Guides earn 90% (10% platform fee). An additional 4% payment processing fee applies to cover Stripe transaction costs.",
+        },
+        {
           question: "How does the escrow payment system work?",
           answer:
-            "When travelers book your tour, payment is held securely in escrow. After successful tour completion, the funds are released to your Muslifie balance within 24 hours, minus platform fees. This protects both guides and travelers by ensuring payment security.",
+            "When travelers book your tour, payment is held securely in escrow. After successful tour completion, the funds are released to your Muslifie balance within 24 hours. Day trips release 85%, package tours release 90% minus the 4% processing fee.",
         },
         {
           question: "How do I receive payments and autopayouts?",
@@ -356,7 +361,7 @@ export const faq = {
         {
           question: "What are the platform and processing fees?",
           answer:
-            "Muslifie charges an estimated 20-30% platform fee. For Stripe Connect users, processing fees are estimated 2.9% + $0.30 per transaction. Bank transfer fees vary by region but are typically 3-5% higher than Stripe fees.",
+            "Day Trips: 15% platform fee + 4% processing fee. Package Tours: 10% platform fee + 4% processing fee. For Stripe Connect users, standard Stripe fees of 2.9% + $0.30 per transaction apply during payout. Bank transfer fees vary by region but are typically higher than Stripe fees.",
         },
         {
           question: "How do I add my payment method?",
@@ -389,65 +394,349 @@ export const privacyPolicy = {
 
 ## Introduction
 
-Welcome to Muslifie. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you use our App.
+Welcome to our Muslim Travel App ("we", "our", or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and related services.
 
-## Information We Collect
+## 1. Information We Collect
 
-### 1. Information You Provide
-- **Account Information:** When you sign up for our App, We may collect identifiers such as your name, email address, and any other information you provide when creating an account.
-- **User Content:** We may collect any content you upload, post, or otherwise transmit through the App, including messages, photos, and other media.
+We collect several types of information to provide and improve our services:
 
-### 2. Information We Collect Automatically
-- **Usage Data:** We collect information about your interactions with the App, such as the features you use and the time spent on the App.
-- **Device Information:** We collect information about the device you use to access the App, including IP address, device type, and operating system.
+**Personal Information:**
+- Name, email address, and phone number
+- Profile picture and preferences
+- Payment information and billing details
+- Travel documents and identification (when required)
+- Location data (with your permission)
 
-### 3. Information from Third Parties
-- **Third-Party Services:** If you connect to the App through a third-party service (e.g., social media), we may collect information from that service as permitted by their privacy policies.
+**Usage Information:**
+- App usage patterns and preferences
+- Device information (device type, operating system, unique device identifiers)
+- IP address and general location information
+- Search queries and booking history
 
-## Legal Basis
+**Communication Data:**
+- Messages sent through our chat features
+- Customer support communications
+- Feedback and reviews submitted
 
-We process your personal information based on your consent, to fulfill our contractual obligations, and where we have a legitimate interest.
+## 2. How We Use Your Information
 
-## Children’s Privacy
+We use your information for the following purposes:
 
-Our App is not intended for use by children under the age of 13 (or 16 in the EU). We do not knowingly collect personal information from children.
+**Service Provision:**
+- Process bookings and reservations
+- Connect you with verified local guides
+- Provide customer support and assistance
+- Send booking confirmations and travel updates
 
-## How We Use Your Information
+**Personalization:**
+- Customize your travel recommendations
+- Show relevant halal dining and prayer locations
+- Provide location-based services and content
 
-We may use the information we collect for the following purposes:
-- **To Provide and Maintain Our Service:** We use your information to operate and improve the App.
-- **To Communicate with You:** We may use your contact information to send you updates, notifications, and other communications related to the App.
-- **To Personalize Your Experience:** We may use your information to personalize your experience with the App and to offer you content tailored to your interests.
-- **For Analytics and Research:** We use the information to analyze how our users interact with the App and to improve our services.
+**Communication:**
+- Send important service notifications
+- Share promotional offers (with your consent)
+- Respond to your inquiries and feedback
 
-## Sharing Your Information
+**Security and Legal:**
+- Verify identity and prevent fraud
+- Comply with legal obligations
+- Protect the safety of our users and guides
 
-We do not share your personal information with third parties except in the following circumstances:
-- **With Your Consent:** We may share your information with third parties if you give us explicit consent to do so.
-- **Service Providers:** We may share your information with third-party service providers who perform services on our behalf.
-- **Legal Requirements:** We may disclose your information if required by law, or if we believe that such action is necessary to comply with legal obligations, protect our rights, or prevent fraud.
+## 3. Information Sharing and Disclosure
 
-## Your Rights and Choices
+We do not sell your personal information. We may share your information in these circumstances:
 
-- **Access and Correction:** You have the right to access and correct the personal information we hold about you.
-- **Data Deletion:** You may request that we delete your personal information by contacting us at [Your Contact Information].
-- **Opt-Out:** You may opt out of receiving promotional communications from us by following the instructions in those communications.
+**With Service Providers:**
+- Local guides for booked tours and services
+- Payment processors for transaction processing
+- Cloud storage providers for data hosting
+- Customer service platforms
 
-## Security
+**For Legal Reasons:**
+- When required by law or legal process
+- To protect our rights and safety
+- To prevent fraud and ensure platform security
 
-We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no security system is completely secure, and we cannot guarantee the absolute security of your information.
+**Business Transfers:**
+- In case of merger, acquisition, or asset sale
+- With proper notice and continued privacy protection
 
-We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.
+**With Your Consent:**
+- When you explicitly agree to sharing
+- For features that require data sharing
 
-## Changes to This Privacy Policy
+## 4. Data Security
 
-We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" above. Your continued use of the App after such changes signifies your acceptance of the revised Privacy Policy.
+We implement robust security measures to protect your information:
 
-## Contact Us
+**Technical Safeguards:**
+- Encryption of data in transit and at rest
+- Secure servers with regular security updates
+- Multi-factor authentication for sensitive operations
+- Regular security audits and monitoring
 
-If you have any questions or concerns about this Privacy Policy, please contact us at:
+**Access Controls:**
+- Limited access to personal information
+- Employee training on privacy practices
+- Secure authentication systems
+- Regular access reviews and updates
 
-Muslifie
+Despite our best efforts, no security system is impenetrable. We cannot guarantee the absolute security of your information.
+
+## 5. Your Privacy Rights
+
+You have the following rights regarding your personal information:
+
+**Access and Portability:**
+- Request a copy of your personal data
+- Export your data in a portable format
+- Review how your information is being used
+
+**Correction and Updates:**
+- Update your profile information
+- Correct inaccurate personal data
+- Modify your preferences and settings
+
+**Deletion and Restriction:**
+- Request deletion of your account and data
+- Limit how we process your information
+- Object to certain uses of your data
+
+**Communication Preferences:**
+- Opt out of marketing communications
+- Manage notification settings
+- Control data sharing preferences
+
+To exercise these rights, please contact us at support@muslifie.com
+
+## 6. Location Services
+
+Our app uses location services to enhance your travel experience:
+
+**Location Data Collection:**
+- GPS coordinates for navigation and recommendations
+- Check-in locations for safety and verification
+- Nearby halal restaurants and prayer locations
+
+**Usage of Location Data:**
+- Provide location-based recommendations
+- Enable emergency assistance features
+- Improve service quality and safety
+
+**Location Controls:**
+- You can disable location services in your device settings
+- Location sharing can be controlled per feature
+- Emergency location sharing may override general settings for safety
+
+## 7. Children's Privacy
+
+Our services are not intended for children under 13 years of age:
+
+**Age Restrictions:**
+- Users must be at least 13 years old
+- Parental consent required for users under 18
+- Special protections for minors' data
+
+If we discover we have collected information from a child under 13, we will delete it immediately. Parents who believe we have collected their child's information should contact us.
+
+## 8. International Data Transfers
+
+Your information may be transferred and processed in countries other than your own:
+
+**Transfer Safeguards:**
+- Adequate protection measures in place
+- Compliance with applicable data protection laws
+- Contractual protections with service providers
+
+By using our services, you consent to the transfer of your information to countries that may have different data protection laws than your country of residence.
+
+## 9. Data Retention
+
+We retain your information for as long as necessary:
+
+**Active Accounts:**
+- Profile data retained while account is active
+- Booking history maintained for service purposes
+- Communication records kept for support
+
+**Inactive Accounts:**
+- Data deleted after 2 years of inactivity
+- Essential records may be retained longer for legal compliance
+- Users can request immediate deletion
+
+**Legal Requirements:**
+- Some data retained to comply with legal obligations
+- Financial records kept as required by law
+- Safety and security logs maintained for protection
+
+## 10. Cookies and Tracking
+
+We use cookies and similar technologies:
+
+**Types of Cookies:**
+- Essential cookies for app functionality
+- Analytics cookies to understand usage
+- Preference cookies to remember your settings
+
+**Third-Party Services:**
+- Analytics providers (anonymized data)
+- Advertising partners (with your consent)
+- Social media integrations
+
+You can control cookie preferences through your device settings and our app preferences.
+
+## 11. Changes to This Policy
+
+We may update this Privacy Policy periodically:
+
+**Notification of Changes:**
+- Email notification for significant changes
+- In-app notifications for policy updates
+- Updated "Last Modified" date at the top
+
+**Continued Use:**
+- Continued use constitutes acceptance of changes
+- You may discontinue use if you disagree with updates
+- Previous versions available upon request
+
+## 12. Legal Basis for Processing
+
+We process your personal information based on:
+- Your consent when you create an account
+- To fulfill our contractual obligations
+- Where we have a legitimate interest
+- To comply with legal requirements
+
+## 13. Guide Transparency and Availability
+
+We maintain transparency about tour guide assignments:
+
+**Tour Descriptions:**
+- Tours clearly list all licensed guides who may lead the tour
+- Multiple guides may be associated with a single tour offering
+- One of the listed guides will lead based on availability
+- All listed guides are verified, licensed, and qualified
+
+**No Surprise Substitutions:**
+- We do not substitute guides who are not listed in the tour description
+- If a tour states "Tour by [Specific Guide Name]", only that guide will lead
+- If substitution is needed for listed-guide tours, travelers will be notified in advance
+- Substituting unlisted guides is considered a breach of trust
+
+**What You Should Know:**
+- Check the tour description for all guides who may lead your tour
+- Guide availability varies based on schedules and bookings
+- All listed guides offer the same quality of service
+- You can view each guide's profile and qualifications in the app
+
+**Traveler Expectations:**
+- Tour quality remains consistent regardless of which listed guide leads
+- The tour itinerary and experience remain the same
+- If you have a preference, you may inquire about specific guide availability
+- Guide assignment confirmations are sent before your tour date
+
+This transparency policy ensures you know exactly who may guide your tour before booking.
+
+## 14. Limitation of Liability
+
+By using our services, you acknowledge and agree to the following limitations:
+
+**Service Disclaimer:**
+- Services are provided "as is" without warranties
+- We are not liable for guide conduct or service quality
+- Local guides are independent contractors, not our employees
+- We do not guarantee accuracy of information provided by guides
+
+**User Responsibility:**
+- Users are responsible for their own safety and decisions
+- Travel at your own risk and discretion
+- Verify all information independently before making decisions
+- Follow local laws and regulations during your travels
+
+**Third-Party Services:**
+- Not responsible for third-party content or services
+- External links and recommendations provided for convenience only
+- No liability for accommodations, restaurants, or other venues listed
+- Payment processor issues are subject to their terms
+
+**Force Majeure:**
+- Not liable for events beyond our reasonable control
+- Natural disasters, political instability, or health emergencies
+- Travel restrictions, visa denials, or border closures
+- Technical failures or internet outages
+
+**Maximum Liability:**
+- Our total liability limited to amount paid for the specific service
+- No liability for indirect, incidental, or consequential damages
+- No responsibility for lost profits, data, or opportunities
+- Exclusions may not apply where prohibited by law
+
+**Medical and Health:**
+- Not responsible for medical issues or health emergencies
+- Users should consult healthcare professionals before travel
+- No liability for food allergies, dietary restrictions, or illness
+- Emergency services coordination provided as courtesy only
+
+## 15. Refund and Cancellation Policy
+
+Our refund and cancellation terms are designed to be fair to both travelers and guides:
+
+**Traveler Cancellation:**
+- Bookings can be cancelled before the cancellation deadline
+- Full refund available if cancelled before deadline
+- No refund after the cancellation deadline has passed
+- Cancellation deadline is shown at the time of booking
+- Cancellation deadline varies by tour and guide
+- Processing fees may apply (if applicable)
+
+**Future Updates (Guide Cancellation):**
+- Guide cancellation feature coming in future updates
+- Guides will be able to cancel with solid, verifiable reasons
+- Acceptable reasons include: emergencies, illness, safety concerns
+- Automatic refund processing for guide-initiated cancellations
+- This feature is not yet available
+
+**Refund Processing:**
+- Approved refunds processed within 5-7 business days
+- Refunds issued to original payment method
+- Bank processing times may vary
+- Notification sent once refund is processed
+
+**Non-Refundable Circumstances:**
+- After cancellation deadline has passed
+- No-show without prior cancellation
+- Services already rendered or partially completed
+- Violation of terms and conditions
+
+**Exceptions:**
+- Emergency situations reviewed on case-by-case basis
+- Natural disasters or force majeure events
+- Government-imposed travel restrictions
+- Documentation required for exception requests
+
+To cancel a booking or request a refund, please contact us through the app or at support@muslifie.com
+
+## 16. Contact Information
+
+If you have questions about this Privacy Policy or our privacy practices:
+
+**Contact Methods:**
+- Email: support@muslifie.com
+- In-app support chat
+- Written correspondence to our registered address
+
+**Response Time:**
+- We aim to respond within 48 hours
+- Complex inquiries may take up to 7 business days
+- Emergency privacy concerns handled immediately
+
+**Data Protection Officer:**
+- Available for privacy-related concerns
+- Can be reached through our main contact email
+- Specialized in data protection and privacy law
+
+---
 
 📧 [info@thetravelsofzee.com](mailto:info@thetravelsofzee.com)  
 🕌 With sincerity and responsibility,  
@@ -470,105 +759,222 @@ export const paymentPolicy = {
 
 Muslifie ensures secure and transparent payment handling through an **escrow-based system** with flexible payout options for guides and partners. This policy explains how payments, fees, withdrawals, and related processes are managed on our platform.
 
-Disclaimer on Split Payments
+---
 
-Muslifie shall bear no responsibility or liability in the event that a Travel Partner elects to divide, split, or otherwise structure payments outside the platform, including but not limited to requesting partial payment in cash or other forms. Any such arrangement is made solely between the Travel Partner and the user. Travel Partners remain solely responsible for clearly disclosing in their service description any requirement for split or partial payments, whether prior to booking or subsequent thereto.
+## Disclaimer on Split Payments
+
+**IMPORTANT NOTICE:**
+
+Muslifie shall bear no responsibility or liability in the event that a Travel Partner elects to divide, split, or otherwise structure payments outside the platform, including but not limited to requesting partial payment in cash or other forms. 
+
+**Key Points:**
+- Any split payment arrangement is made solely between the Travel Partner and the user
+- Travel Partners remain solely responsible for clearly disclosing in their service description any requirement for split or partial payments
+- Disclosure must be made prior to booking or subsequent thereto
+- Muslifie is not liable for any disputes arising from off-platform payment arrangements
+- All platform protections only apply to payments processed through Muslifie
 
 ---
 
 ## Complete Payment Flow
 
-1. **Booking & Escrow**  
-   Traveler makes a booking → Payment is held securely in escrow until tour completion.
+**Step 1: Booking & Escrow**  
+Traveler makes booking → Payment held securely in escrow until tour completion
 
-2. **Tour Completion**  
-   Guide marks the tour as completed → System releases funds from escrow.
+**Step 2: Tour Completion**  
+Guide marks tour as completed → System releases funds from escrow
 
-3. **Balance Addition**  
-   Earnings are added to your Muslifie balance within 24 hours (minus platform fees).
+**Step 3: Balance Addition**  
+Earnings added to your Muslifie balance within 24 hours (minus platform fees)
 
-4. **Withdrawal Options**  
-   Withdraw from balance via **Stripe Connect autopayouts** or **manual bank transfers**.
+**Step 4: Withdrawal Options**  
+Withdraw from balance via Stripe Connect autopayouts or manual bank transfers
 
-✅ *Escrow Protection ensures your payment is guaranteed once the tour is completed successfully.*
+✅ **Escrow Protection:** Your payment is guaranteed once tour is completed successfully
 
 ---
 
-## Platform Fees & Commission
+## Platform Fees & Commission Structure
 
-- **Service Fee:** Muslifie charges an estimated **20-30%** processing & service fee on all bookings.  
-- **Processing Fee:** 2.9% + $0.30 per transaction.  
-- **Guide Earnings:** Guides receive an estimated **70-80%** of the booking amount after completion.  
-- **Influencer Commission:** Influencers earn up to **15% commission** on bookings made with their promo codes.  
-- **Transparent Pricing:** All fees are displayed clearly during the booking process.  
+### Tour Type-Based Fee Structure
 
-**Example:** $100 booking → Platform fee $20-$30 → Guide receives $70-$80 in balance.
+**🌅 Day Trips**
+- **Platform Fee:** 15%
+- **Guide Receives:** 85%
+- **Influencer Commission:** 5% on bookings with promo codes
+
+**📦 Package Tours**
+- **Platform Fee:** 10%
+- **Guide Receives:** 90%
+- **Influencer Commission:** 2.5% on bookings with promo codes
+
+**💳 Payment Processing Fee**
+- **Additional Fee:** 4% separate payment processing fee
+- Applies to all bookings to cover Stripe transaction costs
+- Separate from platform commission
+
+**📊 Transparent Pricing**
+- All fees clearly displayed during booking process
+- No hidden charges ever
+- Complete fee breakdown shown before payment
+
+### Real Examples:
+
+**Day Trip Example:**
+- $100 booking
+- Platform fee: $15 (15%)
+- Processing fee: $4 (4%)
+- **Guide receives: $85 in balance**
+
+**Package Tour Example:**
+- $500 booking
+- Platform fee: $50 (10%)
+- Processing fee: $20 (4%)
+- **Guide receives: $450 in balance**
 
 ---
 
 ## Escrow & Payment Security
 
-- **Secure Escrow:** All payments are held in escrow until tour completion, protecting both guides and travelers.  
-- **Payment Release:** Funds are automatically released to your balance within 24 hours after the tour is marked completed.  
-- **Completion Requirement:** Guide must mark the tour as completed to trigger payment release.  
-- **Dispute Protection:** Escrow ensures fair handling of payment disputes and cancellations.  
-- **Industry Standard:** Escrow follows best practices used by major booking platforms.  
+**Secure Escrow System**
+- All payments held in secure escrow until tour completion
+- Protects both guides and travelers with bank-level security
+- Industry-standard security protocols used by major financial institutions
+
+**Commission-Based Release**
+- Day trips: 85% released to guide balance after completion
+- Package tours: 90% released to guide balance after completion
+- Automatic release within 24 hours of marking tour as completed
+
+**Automatic Release Trigger**
+- Tours must be marked as "completed" by guide
+- Triggers automatic payment release from escrow
+- Both guide and traveler receive confirmation
+
+**Dispute Protection**
+- Escrow system handles payment disputes fairly
+- Full transparency and audit trail maintained
+- Case-by-case review for quality or safety issues
 
 ---
 
-## Payout Methods & Fees
+## Payout Methods & Processing Fees
 
-- **Stripe Connect (Recommended):**  
-  - Automatic daily/weekly payouts  
-  - Processing fee: **2.9% + $0.30 per transaction**  
+### Stripe Connect (Recommended)
 
-- **Bank Transfer Alternative:**  
-  - Manual withdrawals to bank account  
-  - Fees: **3-5% higher** than Stripe Connect  
+**Benefits:**
+- Automatic daily/weekly payouts
+- Lowest processing fees available
+- Fastest payout method
+- Available in 45+ countries
 
-- **Country Availability:** Stripe Connect available in **45+ countries**.  
-- **Best Option:** Use Stripe Connect for lowest fees and fastest payouts.  
+**Processing Fees:**
+- Standard Stripe fee: 2.9% + $0.30 per transaction
+- Deducted from payout amount, not from commission
+- Fair earnings guaranteed
+
+**Example Payouts:**
+- Day Trip ($85 commission) → Stripe fee $2.76 → **You receive $82.24**
+- Package Tour ($450 commission) → Stripe fee $13.36 → **You receive $436.64**
+
+### Bank Transfer Alternative
+
+**When to Use:**
+- Available in regions where Stripe Connect is not supported
+- Manual withdrawals to bank account
+- Higher processing fees than Stripe Connect
+
+**Additional Features:**
+- Multi-currency support
+- Automatic conversion to local currency
+- Competitive exchange rates
 
 ---
 
 ## Withdrawal Policy & Timeline
 
-- **Minimum Withdrawal:** $50  
-- **Stripe Connect Timeline:** Autopayouts on a daily or weekly schedule (configurable).  
-- **Bank Transfer Timeline:** 3-5 business days.  
-- **Balance Accumulation:** Earnings accumulate in your Muslifie balance with no expiration.  
-- **Withdrawal Methods:**  
-  - Stripe: bank account, debit card  
-  - Bank transfer: direct to account details  
+**Minimum Withdrawal:** $50
+
+**Stripe Connect Timeline:**
+- Autopayouts: Daily or weekly schedule (configurable)
+- Fastest payout method available
+
+**Bank Transfer Timeline:**
+- Processing time: 3-5 business days
+- Varies by bank and location
+
+**Balance Management:**
+- Earnings accumulate in your Muslifie balance
+- No expiration date
+- No maintenance fees
+
+**Withdrawal Methods:**
+- Stripe: Bank account or debit card
+- Bank transfer: Direct deposit to provided account details
 
 ---
 
 ## Booking Management & Cancellations
 
-- **Guide Cancellations:** Full refund automatically issued to the traveler.  
-- **Traveler Cancellations:** Strict **no-refund** policy.  
-- **Emergency Cancellations:** Natural disasters or safety emergencies handled case-by-case by support.  
-- **Quality Assurance:** Payments may be held if significant complaints or disputes arise.  
+**Guide Cancellation Policy**
+- Full refund automatically issued to traveler
+- Guide commission forfeited
+
+**Traveler Cancellation Policy**
+- Package tours: Follow specific cancellation deadline
+- Day trips: No refunds within 48 hours of tour start
+- Cancellation deadline shown at booking
+
+**Emergency Situations**
+- Natural disasters or safety emergencies
+- Handled case-by-case by support team
+- Documentation may be required
+
+**Quality Assurance**
+- Payments may be held for review if significant complaints arise
+- Ensures platform quality and safety standards
+
+**Completion Verification**
+- Both guide and traveler must confirm tour completion
+- Required for automatic payment release from escrow
 
 ---
 
 ## Tax & Legal Compliance
 
-- **Tax Responsibility:** Guides are responsible for reporting earnings according to local tax laws.  
-- **Documentation:** Earnings reports available in your dashboard.  
-- **Policy Updates:** Changes to the policy will be communicated with **30 days notice**.  
-- **Regulatory Compliance:** All transactions comply with local and international financial regulations.  
+**Tax Responsibility**
+- Guides responsible for reporting earnings according to local tax laws
+- Varies by jurisdiction and regulations
+
+**Earnings Documentation**
+- Detailed earnings reports available in dashboard
+- Tax documents provided for accurate filing
+
+**Policy Updates**
+- Changes communicated with 30 days advance notice
+- Via email and in-app notifications
+
+**Regulatory Compliance**
+- All transactions comply with local and international financial regulations
+- AML and KYC requirements followed
+
+**Data Protection**
+- All payment data encrypted
+- Processed according to PCI DSS standards
+- GDPR compliance maintained
 
 ---
 
 ## Payment Support
 
-Need help with payments, withdrawals, or fees? Our support team is available **24/7** to assist with:  
-- Payment processing questions  
-- Withdrawal issues  
-- Fee clarifications  
-- Escrow concerns  
-- Tax documentation requests  
+Need help with payments, withdrawals, fees, or commission structure? Our support team is available **24/7** to assist with:
+
+- Payment processing questions
+- Withdrawal issues
+- Fee clarifications
+- Escrow concerns
+- Tax documentation requests
+- Commission structure inquiries
 
 📧 [support@muslifie.com](mailto:support@muslifie.com)  
 
